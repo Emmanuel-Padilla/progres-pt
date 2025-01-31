@@ -18,10 +18,10 @@ export const headerData = {
       text: 'Videos',
       href: '/videos'
     },
-    {
-      text: 'Blogs',
-      href: '/blog'
-    },
+    // {
+    //   text: 'Blogs',
+    //   href: '/blog'
+    // },
   ],
   actions: [{ text: 'Contáctanos', href: 'https://wa.me/523319242398', target: '_blank' }],
 };
