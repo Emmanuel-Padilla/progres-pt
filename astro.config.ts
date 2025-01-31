@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
@@ -28,6 +29,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    react(),
     sitemap(),
     mdx(),
     icon({

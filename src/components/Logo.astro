@@ -1,9 +1,10 @@
----
-import { SITE } from 'astrowind:config';
----
+<div>
+  <img class="h-20 w-20 mr-6 rounded-full" src="/images/logopastel.jpeg" alt="logo">
+</div>
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<style>
+  .rounded-full {
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor circular */
+  }
+</style>

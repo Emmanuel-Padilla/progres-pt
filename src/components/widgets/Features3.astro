@@ -4,6 +4,7 @@ import ItemGrid from '~/components/ui/ItemGrid.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Image from '~/components/common/Image.astro';
 import type { Features as Props } from '~/types';
+import MapsGrid from '../ui/mapsGrid.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -15,6 +16,7 @@ const {
   defaultIcon,
   isBeforeContent,
   isAfterContent,
+  mapas,
 
   id,
   isDark = false,
@@ -53,18 +55,35 @@ const {
       )
     }
   </div>
-
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon={defaultIcon}
-    classes={{
-      container: 'mt-12',
-      panel: 'max-w-full sm:max-w-md',
-      title: 'text-lg font-semibold',
-      description: 'mt-0.5',
-      icon: 'flex-shrink-0 mt-1 text-primary w-6 h-6',
-      ...((classes?.items as object) ?? {}),
-    }}
-  />
+  {
+    mapas ? (
+      <MapsGrid
+        items={items}
+        columns={columns}
+        defaultIcon={defaultIcon}
+        classes={{
+          container: 'mt-12',
+          panel: 'max-w-full sm:max-w-md',
+          title: 'text-lg font-semibold',
+          description: 'mt-0.5',
+          icon: 'flex-shrink-0 mt-1 text-primary w-6 h-6',
+          ...((classes?.items as object) ?? {}),
+        }}
+      />
+    ):(
+      <ItemGrid
+        items={items}
+        columns={columns}
+        defaultIcon={defaultIcon}
+        classes={{
+          container: 'mt-12',
+          panel: 'max-w-full sm:max-w-md',
+          title: 'text-lg font-semibold',
+          description: 'mt-0.5',
+          icon: 'flex-shrink-0 mt-1 text-primary w-6 h-6',
+          ...((classes?.items as object) ?? {}),
+        }}
+      />
+    )
+  }
 </WidgetWrapper>

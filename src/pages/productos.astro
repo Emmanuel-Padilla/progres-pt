@@ -1,0 +1,297 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Productos',
+};
+---
+
+
+
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline=""
+    title="Productos"
+    subtitle=""
+  />
+  
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+  title="Pasteles"
+  subtitle="Descubre nuestros pasteles más deliciosos y populares, ideales para cualquier ocasión."
+  prices={[
+    {
+      title: 'Pastel de Tres Leches',
+      subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
+      images: [
+        { src: "~/assets/images/tresleches1.jpg", alt: "Pastel de Tres Leches 1" },
+        { src: "~/assets/images/tresleches2.jpg", alt: "Pastel de Tres Leches 2" },
+        { src: "~/assets/images/tresleches3.jpg", alt: "Pastel de Tres Leches 3" }
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Ideal para cumpleaños y reuniones familiares.',
+        },
+        {
+          description: 'Disponible en versiones clásicas y con frutas frescas.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Más vendido',
+    },
+    {
+      title: 'Pastel de Chocolate',
+      subtitle: 'Un pastel rico y cremoso, perfecto para los amantes del chocolate.',
+      images: [
+        { src: "~/assets/images/chocolate1.jpg", alt: "Pastel de Chocolate 1" },
+        { src: "~/assets/images/chocolate2.jpg", alt: "Pastel de Chocolate 2" },
+        { src: "~/assets/images/chocolate3.jpg", alt: "Pastel de Chocolate 3" }
+      ],
+      price: 500,
+      period: '',
+      items: [
+        {
+          description: 'Hecho con chocolate premium y relleno cremoso.',
+        },
+        {
+          description: 'Decorado con trozos de chocolate o frutas.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel Red Velvet',
+      subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
+      images: [
+        { src: "~/assets/images/redvelvet1.jpg", alt: "Pastel Red Velvet 1" },
+        { src: "~/assets/images/redvelvet2.jpg", alt: "Pastel Red Velvet 2" },
+        { src: "~/assets/images/redvelvet3.jpg", alt: "Pastel Red Velvet 3" }
+      ],
+      price: 550,
+      period: '',
+      items: [
+        {
+          description: 'Textura esponjosa con el característico color rojo.',
+        },
+        {
+          description: 'Perfecto para celebraciones elegantes.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+  ]}
+/>
+
+  
+<Prices
+title="Muffins"
+subtitle="Descubre nuestros pasteles más deliciosos y populares, ideales para cualquier ocasión."
+prices={[
+  {
+    title: 'Pastel de Tres Leches',
+    subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
+    images: [
+      { src: "~/assets/images/tresleches1.jpg", alt: "Pastel de Tres Leches 1" },
+      { src: "~/assets/images/tresleches2.jpg", alt: "Pastel de Tres Leches 2" },
+      { src: "~/assets/images/tresleches3.jpg", alt: "Pastel de Tres Leches 3" }
+    ],
+    price: 450,
+    period: '',
+    items: [
+      {
+        description: 'Ideal para cumpleaños y reuniones familiares.',
+      },
+      {
+        description: 'Disponible en versiones clásicas y con frutas frescas.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: 'Más vendido',
+  },
+  {
+    title: 'Pastel de Chocolate',
+    subtitle: 'Un pastel rico y cremoso, perfecto para los amantes del chocolate.',
+    images: [
+      { src: "~/assets/images/chocolate1.jpg", alt: "Pastel de Chocolate 1" },
+      { src: "~/assets/images/chocolate2.jpg", alt: "Pastel de Chocolate 2" },
+      { src: "~/assets/images/chocolate3.jpg", alt: "Pastel de Chocolate 3" }
+    ],
+    price: 500,
+    period: '',
+    items: [
+      {
+        description: 'Hecho con chocolate premium y relleno cremoso.',
+      },
+      {
+        description: 'Decorado con trozos de chocolate o frutas.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: '',
+  },
+  {
+    title: 'Muffins',
+    subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
+    images: [
+      { src: "~/assets/images/redvelvet1.jpg", alt: "Pastel Red Velvet 1" },
+      { src: "~/assets/images/redvelvet2.jpg", alt: "Pastel Red Velvet 2" },
+      { src: "~/assets/images/redvelvet3.jpg", alt: "Pastel Red Velvet 3" }
+    ],
+    price: 550,
+    period: '',
+    items: [
+      {
+        description: 'Textura esponjosa con el característico color rojo.',
+      },
+      {
+        description: 'Perfecto para celebraciones elegantes.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: 'Recomendado',
+  },
+]}
+/>
+
+
+<Prices
+  title="Galletas"
+  subtitle="Descubre nuestros pasteles más deliciosos y populares, ideales para cualquier ocasión."
+  prices={[
+    {
+      title: 'Pastel de Tres Leches',
+      subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
+      images: [
+        { src: "~/assets/images/tresleches1.jpg", alt: "Pastel de Tres Leches 1" },
+        { src: "~/assets/images/tresleches2.jpg", alt: "Pastel de Tres Leches 2" },
+        { src: "~/assets/images/tresleches3.jpg", alt: "Pastel de Tres Leches 3" }
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Ideal para cumpleaños y reuniones familiares.',
+        },
+        {
+          description: 'Disponible en versiones clásicas y con frutas frescas.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Más vendido',
+    },
+    {
+      title: 'Pastel de Chocolate',
+      subtitle: 'Un pastel rico y cremoso, perfecto para los amantes del chocolate.',
+      images: [
+        { src: "~/assets/images/chocolate1.jpg", alt: "Pastel de Chocolate 1" },
+        { src: "~/assets/images/chocolate2.jpg", alt: "Pastel de Chocolate 2" },
+        { src: "~/assets/images/chocolate3.jpg", alt: "Pastel de Chocolate 3" }
+      ],
+      price: 500,
+      period: '',
+      items: [
+        {
+          description: 'Hecho con chocolate premium y relleno cremoso.',
+        },
+        {
+          description: 'Decorado con trozos de chocolate o frutas.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel Red Velvet',
+      subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
+      images: [
+        { src: "~/assets/images/redvelvet1.jpg", alt: "Pastel Red Velvet 1" },
+        { src: "~/assets/images/redvelvet2.jpg", alt: "Pastel Red Velvet 2" },
+        { src: "~/assets/images/redvelvet3.jpg", alt: "Pastel Red Velvet 3" }
+      ],
+      price: 550,
+      period: '',
+      items: [
+        {
+          description: 'Textura esponjosa con el característico color rojo.',
+        },
+        {
+          description: 'Perfecto para celebraciones elegantes.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+  ]}
+/>
+
+  
+  
+  <!-- Features3 Widget ************** -->
+
+  <!-- <Features3
+    title="TITLE_1"
+    subtitle="SUBTITLE_1"
+    columns={2}
+    items={[
+      {
+        title: 'TT_1',
+        description: 'DSC_1',
+        icon: 'tabler:stairs',
+      },
+      {
+        title: 'TT_2',
+        description: 'DSC_2',
+        icon: 'tabler:flip-vertical',
+      },
+      {
+        title: 'TT_3',
+        description: 'DSC_3',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'TT_4',
+        description: `DSC_4`,
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'TT_5',
+        description: 'DSC_5',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: 'TT_6',
+        description: 'DSC_6',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Contactanos',
+        href: 'https://wa.me/3317062824',
+      },
+    ]}
+    title="THE_BEST"
+    subtitle="BEST_PRICES"
+  /> -->
+</Layout>

@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Pasteleria America
+  site: 'https://pasteleriasamerica.com/'
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Pastelería América
+    template: '%s — Pastelería Gourmet en Jalisco'
+  description: "Disfruta de los mejores pasteles personalizados, pasteles de boda, repostería artesanal y postres gourmet en Jalisco. Hechos con ingredientes de la más alta calidad."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Pasteleria America
     images:
-      - url: '~/assets/images/default.png'
+      # - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website

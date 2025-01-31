@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/PageLayout.astro";
+import HeroText from '~/components/widgets/HeroText.astro';
+import platillos from '~/utils/data/platillos.json'
+
+const metadata = {
+  title: 'Galeria',
+};
+---
+
+<Layout metadata={metadata}>
+
+    <HeroText
+    title="Galeria de Pasteles"
+    subtitle="HCWHHCuybb"
+  />
+  
+  <!-- Sección de Imágenes -->
+  <section>
+    <div class="wrapper">
+        <div class="gallery">
+            {
+                platillos.map((platillo:any )=>{
+                    return (
+                    <div class="image"> <img src={platillo.src} alt={platillo.alt}/></div>
+                    );
+                })
+            }
+        </div>
+    </div>
+  </section>
+
+<style>
+    .wrapper{
+        max-width: 900px;
+        margin-inline: auto;
+    }
+
+.image:hover {
+    transform: scale(1.2);
+}
+
+
+.gallery:hover > :not(:hover) {
+    transform: perspective(400px) rotateY(30deg) scale(0.8);
+    margin-inline: -1.5rem ;   
+}
+.image:hover ~ .image {
+    transform: perspective(400px) rotateY(-30deg) scale(0.8);
+}
+
+
+
+.gallery {
+    display: flex;
+    gap: 0.25rem;
+    transform-style: preserve-3d;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Hace que las imágenes se alineen al deslizar */
+    padding-bottom: 10px; /* Agrega un poco de espacio para evitar cortes */
+    max-width: 900px; /* Asegura que el contenedor tenga un ancho definido */
+    white-space: nowrap; /* Evita que las imágenes se ajusten a nuevas líneas */
+}
+
+.image {
+    flex: 0 0 auto;
+    aspect-ratio: 1/1.5;
+    background-color: #fff;
+    cursor: pointer;
+    pointer-events: auto;
+    -webkit-box-reflect: below 4px linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+    transition: 0.4s;
+    scroll-snap-align: center;
+    width: 290px; /* Aumenté un poco el tamaño */
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+    border-radius: 4px;
+}
+</style>
+
+<!-- Fin de Sección de Imágenes -->
+</Layout>

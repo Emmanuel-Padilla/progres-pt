@@ -1,0 +1,75 @@
+---
+import Youtube from '~/components/shortcodes/Youtube'
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'JM Dental Chapala',
+  ignoreTitleTemplate: true,
+};
+const videos = [
+  {
+    title: "Bienvenida a la Clínica",
+    description: "Un recorrido por nuestras instalaciones.",
+    url: "https://youtu.be/EqrpGbibIQo?si=gijohvfjuYTHvyQX"
+  },
+  {
+    title: "Procedimiento de Limpieza Dental",
+    description: "Así cuidamos tu sonrisa.",
+    url: "wP47WQupuOo"
+  },
+  {
+    title: "Testimonios de Pacientes",
+    description: "Conoce las experiencias de nuestros pacientes.",
+    url: "VjCQ21bqJVo"
+  }
+
+];
+---
+
+<Layout metadata={metadata}>
+
+<section id="videos" class="videos-section">
+  <h2 class="text-6xl font-bold mb-4">Nuestros Videos</h2>
+  <p class="text-lg mb-9">Explora más con nosotros.</p>
+  
+  <div class="videos-grid">
+    {videos.map((video) => (
+      <div class="video-card">
+        <h3 style="color: black;">{video.title}</h3>
+        <p class="text-lg mb-9" style="color: black;">{video.description}</p>
+        <Youtube client:load id={video.url} title={video.title}/>
+        <h1>hola</h1>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .videos-section {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .video-card:hover {
+    transform: scale(1.04);
+    transition: all 0.475s;
+    cursor: pointer;
+  }
+  .videos-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .video-card {
+    background: rgba(244, 242, 242, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+</style>
+</Layout>

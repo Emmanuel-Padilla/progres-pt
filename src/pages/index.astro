@@ -1,399 +1,287 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features3.astro';
+
+
+
+
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: 'Pasteleria America',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  <Hero2
+    tagline=""
+    image={{
+      src: '~/assets/images/pasteleria3.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS
+      <span class="text-accent dark:text-white highlight">Pasteleria America</span><br />  <span
+        class="hidden xl:inline"></span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        Pastelería América es un negocio especializado en la creación de postres y pasteles artesanales, caracterizado por su calidad, tradición y estilo elegante. Ofrece una variedad de opciones dulces, ideales para celebraciones y momentos especiales, destacándose por su atención al detalle y sabores exquisitos.
+      </span>  
     </Fragment>
-  </Hero>
+  </Hero2>
 
-  <!-- Note Widget ******************* -->
+  <!-- Features3 Widget ************** -->
 
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+  <Features3
+    id=""
+    title="¿Buscas el pastel perfecto o un postre delicioso? "
+    subtitle="Con nuestro proceso sencillo y personalizado, puedes encargar tus dulces favoritos en pocos pasos. Descubre cómo hacerlo y disfruta de una experiencia dulce y sin complicaciones."
+    columns={2}
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+        title: 'Explora nuestro menú',
+        description: `Revisa nuestra variedad de productos: pasteles personalizados, postres individuales, y más. Encuentra inspiración en nuestra galería de sabores y decoraciones.`,
+        icon: 'tabler:square-number-1',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Contáctanos o realiza tu pedido en línea',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Haz tu pedido directamente desde nuestra tienda en línea o contáctanos para consultas y personalizaciones. Nos encanta hacer realidad tus ideas dulces.',
+        icon: 'tabler:square-number-2',
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+        title: 'Personaliza tu elección',
+        description: 'Selecciona sabores, tamaños y decoraciones especiales para hacer tu pastel único. Nuestros expertos en repostería te ayudarán a lograrlo.',
+        icon: 'tabler:square-number-3',
       },
       {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+        title: 'Recoge o recibe tu pedido',
+        description: `Pasa por nuestra tienda para recoger tu pedido o aprovecha nuestro servicio de entrega a domicilio.`,
+        icon: 'tabler:square-number-4',
       },
     ]}
+    image={{
+      src: '~/assets/images/pasteleria2.jpg',
+      alt: 'Colorful Image',
+    }}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Sabores únicos y de alta calidad',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Usamos ingredientes frescos y seleccionados cuidadosamente para garantizar el mejor sabor en cada bocado.',
+        icon: 'tabler:wand',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Diseños personalizados',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Ofrecemos pasteles y postres con decoraciones únicas adaptadas a tus gustos y ocasiones especiales.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Atención al detalle',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Cada creación es elaborada artesanalmente, asegurándonos de cumplir con tus expectativas.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Entrega confiable',
+        description: 'Recibe tus pedidos a tiempo con nuestro servicio de entrega a domicilio, perfecto para eventos importantes.',
+        icon: 'tabler:carousel-horizontal',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/pasteleria1.jpg',
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Lo que nos hace únicos</h3>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Offline Access',
+        description: 'Offer the option for users to download purchased templates for offline use.',
+        icon: 'tabler:wifi-off',
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Secure Cloud Storage',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
+        icon: 'tabler:file-download',
       },
       {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+        title: 'Regular Updates',
+        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
+        icon: 'tabler:refresh',
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Wishlist',
+        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
+        icon: 'tabler:heart',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Vintage Image',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
     </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
+  </Content> -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Visitanos"
+    columns={3}
+    mapas={true}
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Chapala',
+        description: 'Morelos 158, Chapala Centro, 45900 Chapala, Jal.',
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119752.52686256525!2d-103.34356060273433!3d20.289234799999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f40b99cce6193%3A0xcbe949537f52c5c1!2sPasteler%C3%ADa%20Am%C3%A9rica%20Suc.%20Chapala!5e0!3m2!1ses-419!2smx!4v1738036002607!5m2!1ses-419!2sm'
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Ajijic',
+        description: 'Carretera Jocotepec-Chapala 24, 45920 Ajijic, Jal.',
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119752.52686256525!2d-103.34356060273433!3d20.289234799999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f46ab3ccb98f9%3A0x8ca9333904442ea4!2sPasteler%C3%ADa%20Am%C3%A9rica%20Suc.%20Ajijic!5e0!3m2!1ses-419!2smx!4v1738037946238!5m2!1ses-419!2smx" 
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+        title: 'Jocotepec',
+        description: 'Carretera Jocotepec-Chapala 1561, 45822 Ajijic, Jal.',
+        mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119752.28894769448!2d-103.46808600273435!3d20.289542700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f43002eaf3781%3A0xe47c3eb25c4dadc!2sPasteler%C3%ADa%20america!5e0!3m2!1ses-419!2smx!4v1738038033105!5m2!1ses-419!2smx" 
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        
       },
     ]}
   />
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
+    title="Statistics of our app"
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { amount: '20K', icon: 'tabler:download' },
+      { amount: '18.5K', icon: 'tabler:users' },
+      { amount: '4.7', icon: 'tabler:user-star' },
+    ]}
+  /> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Testimonios"
+    testimonials={[
+      {
+        testimonial: `Riquísimos los pasteles hechos con amor! Desde la envoltura y la atención y todo, no se diga de las gelatinas súper ricas al momento de disfrutarlas saben a su sabor y no tan dulces! Me encanta pastelería america por su rico sabor Casero, y se con el cariño y amor q los preparan y eso se sabe! 💕🤗🌟✨💕`,
+        name: 'Ana Pantoja',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava01.png',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `Excelente calidad de pasteles y un sabor único.`,
+        name: 'Juan Antonio López Martínez',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava05.png',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:'Excelente servicio, muy buena calidad, super deliciosos, demasiado creativos, muy profesionales y super amables! Me encantan sus pasteles, todos son super deliciosos! 🤤 Super recomendado! 🤗',
+        name: 'Lizzet Jimenez',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava02.png',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+      {
+        testimonial: `Excelente servicio sabor calidad en decoración ni se diga hermosos pasteles una repostería rica!!!`,
+        name: 'Celia Gutierrez',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava03.png',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `Excelente pasteleria, la mejor en Ribera de Chapala. No vayas a ningún otro lado.`,
+        name: 'Lou Quillio',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava06.png',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'Los pasteles están deliciosos y tienen gran variedad de producto y las decoraciones son muy bonitas',
+        name: 'Beatryz Llanos',
+        job: 'Google Maps.',
+        image: {
+          src: '~/assets/images/ava04.png',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
+    
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    items={[
+      {
+        title: '¿Puedo personalizar mi pastel o postre?',
+        description:
+          '¡Sí, definitivamente! Puedes personalizar tu pastel o postre con nombres, colores, temas específicos e incluso sabores únicos. Solo asegúrate de informarnos sobre tus preferencias al hacer el pedido, y nos encargaremos de hacer que tu diseño sea perfecto.',
+      },
+      {
+        title: '¿Con cuánta anticipación debo hacer mi pedido? ',
+        description:
+          ' Para eventos especiales como cumpleaños o bodas, recomendamos hacer tu pedido con al menos 3 a 5 días de anticipación. Si se trata de un pedido más grande o con decoraciones complejas, es ideal hacerlo con una semana de antelación. ¡Cuanto antes, mejor para asegurarte de que tengamos disponibilidad!',
+      },
+      {
+        title: '¿Tienen opciones para personas con restricciones alimenticias?',
+        description: `Sí, ofrecemos opciones para personas con diversas restricciones alimenticias. Tenemos pasteles sin gluten, sin azúcar, veganos y sin lácteos. Por favor, indícanos cualquier restricción al realizar tu pedido y nos aseguraremos de ofrecerte una opción deliciosa y segura.`,
+      },
+      {
+        title: '¿Ofrecen servicio de entrega a domicilio?',
+        description:
+          'Sí, ofrecemos servicio de entrega a domicilio. Puedes optar por esta opción al hacer tu pedido, y nos aseguraremos de que tu pastel o postre llegue a tiempo y en perfecto estado, directamente a la ubicación que elijas.',
+      },
+      {
+        title: '¿Cuáles son los sabores y tamaños disponibles? ',
+        description:
+          'Tenemos una variedad de sabores para elegir, incluyendo vainilla, chocolate, red velvet, frutas y más. Además, ofrecemos diferentes tamaños de pasteles según tus necesidades, desde pequeños para reuniones familiares hasta grandes para eventos. ¡No dudes en preguntar por nuestras opciones y nos aseguraremos de que encuentres la perfecta para tu ocasión!',
+      },
     ]}
   />
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  
 </Layout>

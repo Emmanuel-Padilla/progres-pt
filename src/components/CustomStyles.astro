@@ -1,63 +1,47 @@
 ---
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
 ---
 
 <style is:inline>
   :root {
+  --aw-font-sans: 'Inter Variable';
+  --aw-font-serif: 'Inter Variable';
+  --aw-font-heading: 'Inter Variable';
+
+  --aw-color-primary: rgb(92, 73, 66);
+  --aw-color-secondary: rgb(91, 72, 65);
+  --aw-color-accent: rgb(100, 82, 74);
+
+  --aw-color-text-heading: rgb(92, 73, 66);
+  --aw-color-text-default: rgb(16, 16, 16);
+  --aw-color-text-muted: rgb(120, 100, 90);
+  --aw-color-bg-page: rgb(240, 235, 230); /* Marrón claro */
+
+  --aw-color-bg-page-dark: rgb(40, 30, 30); /* Marrón oscuro */
+
+  ::selection {
+    background-color: lavender;
+  }
+}
+
+.dark {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(255, 255, 255); /* Blanco */
+    --aw-color-secondary: rgb(130, 100, 90); /* Marrón medio */
+    --aw-color-accent: rgb(170, 140, 120); /* Marrón cálido */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
-
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-text-heading: rgb(255, 255, 255); /* Blanco */
+    --aw-color-text-default: rgb(226, 215, 205); /* Beige claro */
+    --aw-color-text-muted: rgba(226, 215, 205, 0.66); /* Beige claro, translúcido */
+    --aw-color-bg-page: rgb(92, 73, 66); /* Marrón oscuro */
 
     ::selection {
-      background-color: lavender;
+        background-color: rgb(130, 100, 90); /* Marrón medio */
+        color: rgb(255, 255, 255); /* Blanco */
     }
-  }
+}
 
-  .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
-
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
-
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
-
-    ::selection {
-      background-color: black;
-      color: snow;
-    }
-  }
 </style>

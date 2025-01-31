@@ -1,0 +1,87 @@
+---
+import type { ItemGrid as Props } from '~/types';
+import { twMerge } from 'tailwind-merge';
+
+const { items = [], columns, classes = {} } = Astro.props;
+
+const {
+  container: containerClass = '',
+  title: titleClass = '',
+  description: descriptionClass = '',
+} = classes;
+---
+
+{
+  items && (
+  <div class="flex items-stretch justify-center">
+    <div
+      class={twMerge(
+        `grid mx-auto gap-8 md:gap-y-12 ${
+          columns === 4
+            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+            : columns === 3
+              ? 'lg:grid-cols-3 sm:grid-cols-2'
+              : columns === 2
+                ? 'sm:grid-cols-2 '
+                : ''
+        }`,
+        containerClass
+      )}
+    >
+      {items.map(({ title, description, classes: itemClasses = {}, mapSrc }) => (
+            <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+                <div class="rounded-lg backdrop-blur border shadow px-4 py-6 flex w-full max-w-xs flex-col justify-between text-center">
+                  <div class="px-2 py-0">
+
+                    {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
+                    {description && (
+                        <p
+                        class={twMerge(`${title ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}
+                        set:html={description}
+                        />
+                    )}
+
+                  {mapSrc && (
+                    <iframe 
+                      class="map w-full h-64 object-cover mb-4 rounded-md"
+                      src={mapSrc} 
+                      width="350" 
+                      height="350" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade"
+                    >
+                    </iframe>  
+                  )}
+                  </div>
+                </div>
+            </div>
+      ))}
+    </div>
+  </div>
+  )
+}
+
+<style>
+  @media only screen and (max-width: 1024px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+    }
+    .map {
+      max-width: 100%;
+      align-items: stretch;
+    }
+    .info-container {
+      padding: 10px 0px;
+    }
+
+    .data-element {
+      margin: 20px 2px;
+    }
+
+    .space {
+      margin-bottom: 5vh;
+    }
+  }
+</style>

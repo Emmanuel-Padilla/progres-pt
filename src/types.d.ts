@@ -91,6 +91,7 @@ export interface MetaDataTwitter {
 export interface Image {
   src: string;
   alt?: string;
+  href?:string;
 }
 
 export interface Video {
@@ -139,6 +140,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  mapSrc?: string;
 }
 
 export interface Price {
@@ -151,6 +153,8 @@ export interface Price {
   callToAction?: CallToAction;
   hasRibbon?: boolean;
   ribbonTitle?: string;
+  imageUrl?: string; // Nueva propiedad para la URL de la imagen
+  images?: Array<Image>
 }
 
 export interface Testimonial {
@@ -216,7 +220,7 @@ export interface Form {
 export interface Hero extends Omit<Headline, 'classes'>, Omit<Widget, 'isDark' | 'classes'> {
   content?: string;
   actions?: string | CallToAction[];
-  image?: string | unknown;
+  image?: string | unknown | Image;
 }
 
 export interface Team extends Omit<Headline, 'classes'>, Widget {
@@ -246,6 +250,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   video?: Video;
   items?: Array<Item>;
   columns?: number;
+  mapas?: boolean
   defaultIcon?: string;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
@@ -267,6 +272,7 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
     description?: string;
     icon?: string;
     classes?: Record<string, string>;
+  
   }>;
   callToAction?: string | CallToAction;
   image?: string | Image;
