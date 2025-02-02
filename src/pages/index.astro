@@ -18,7 +18,9 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero2
-    tagline=""
+  actions={[
+    { text: 'Contáctanos', href: 'https://wa.me/523319242398', target: '_blank' },
+  ]}
     image={{
       src: '~/assets/images/pasteleria3.jpg',
       alt: 'AstroWind Hero Image',
@@ -42,7 +44,7 @@ const metadata = {
   <Features3
     id=""
     title="¿Buscas el pastel perfecto o un postre delicioso? "
-    subtitle="Con nuestro proceso sencillo y personalizado, puedes encargar tus dulces favoritos en pocos pasos. Descubre cómo hacerlo y disfruta de una experiencia dulce y sin complicaciones."
+    subtitle="Con nuestro proceso sencillo y personalizado, puedes encargar tus postres favoritos en pocos pasos. Descubre cómo hacerlo y disfruta de una experiencia dulce y sin complicaciones."
     columns={2}
     items={[
       {
@@ -94,12 +96,12 @@ const metadata = {
         title: 'Atención al detalle',
         description:
           'Cada creación es elaborada artesanalmente, asegurándonos de cumplir con tus expectativas.',
-        icon: 'tabler:template',
+        icon: 'tabler:mood-happy-filled',
       },
       {
         title: 'Entrega confiable',
         description: 'Recibe tus pedidos a tiempo con nuestro servicio de entrega a domicilio, perfecto para eventos importantes.',
-        icon: 'tabler:carousel-horizontal',
+        icon: 'tabler:circle-check-filled',
       },
     ]}
     image={{
@@ -278,6 +280,11 @@ const metadata = {
         description:
           'Tenemos una variedad de sabores para elegir, incluyendo vainilla, chocolate, red velvet, frutas y más. Además, ofrecemos diferentes tamaños de pasteles según tus necesidades, desde pequeños para reuniones familiares hasta grandes para eventos. ¡No dudes en preguntar por nuestras opciones y nos aseguraremos de que encuentres la perfecta para tu ocasión!',
       },
+      {
+          title: '¿Cuánto tiempo duran los pasteles y cómo debo almacenarlos?',
+          description: 'Nuestros pasteles se mantienen frescos hasta 3 días si se conservan en un lugar fresco y seco. Si tienen rellenos o crema, recomendamos guardarlos en el refrigerador y sacarlos 30 minutos antes de servir para disfrutar su mejor sabor y textura.'
+}
+
     ]}
   />
 

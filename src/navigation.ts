@@ -23,7 +23,7 @@ export const headerData = {
       href: '/blog'
     },
   ],
-  actions: [{ text: 'Contáctanos', href: 'https://wa.me/523319242398', target: '_blank' }],
+  actions: [{ text: 'English', href: '' }],
 };
 
 export const footerData = {
@@ -89,3 +89,5 @@ export const footerData = {
     Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
   `,
 };
+
+
