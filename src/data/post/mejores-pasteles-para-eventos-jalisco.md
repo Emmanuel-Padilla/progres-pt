@@ -2,7 +2,7 @@
 publishDate: 2022-03-10T00:00:00Z
 title: Los Mejores Pasteles para Cada Tipo de Evento 
 excerpt: Los pasteles son el centro de atención en cualquier celebración. Elegir el adecuado puede hacer que un evento sea aún más especial. Aquí te presentamos los mejores tipos de pasteles según la ocasión, para que siempre elijas el ideal.
-image: "~/assets/images/blogboda.jpg"
+image: "~/assets/images/blog/blogboda.webp"
 metadata:
   canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand
 ---

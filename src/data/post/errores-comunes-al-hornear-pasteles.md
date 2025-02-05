@@ -3,7 +3,7 @@ publishDate: 2024-08-12T00:00:00Z
 author: Christophe Felder
 title: Errores comunes al hornear pasteles
 excerpt: Hornear un pastel parece sencillo, pero pequeños errores pueden arruinar el resultado. Aquí te mostramos los errores más comunes y cómo evitarlos.
-image: "~/assets/images/blogmasa.jpg"
+image: "~/assets/images/blog/blogmasa.webp"
 category: Tutoriales
 
 metadata:

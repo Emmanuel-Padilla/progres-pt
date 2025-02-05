@@ -1,107 +1,32 @@
 [
-	{
-	  "src": "/images/postre1.png",
-	  "alt": "1"
-	},
-	{
-	  "src": "/images/postre2.png",
-	  "alt": "2"
-	},
-	{
-	  "src": "/images/postre3.png",
-	  "alt": "3"
-	},
-	{
-	  "src": "/images/postre4.png",
-	  "alt": "4"
-	},
-	{
-	  "src": "/images/postre5.png",
-	  "alt": "5"
-	},
-	{
-	  "src": "/images/postre6.png",
-	  "alt": "6"
-	},
-	{
-	  "src": "/images/postre7.png",
-	  "alt": "7"
-	},
-	{
-	  "src": "/images/postre8.png",
-	  "alt": "8"
-	},
-	{
-	  "src": "/images/postre9.png",
-	  "alt": "9"
-	},
-	{
-	  "src": "/images/postre10.png",
-	  "alt": "10"
-	},
-	{
-	  "src": "/images/postre11.png",
-	  "alt": "11"
-	},
-	{
-	  "src": "/images/postre12.png",
-	  "alt": "12"
-	},
-	{
-	  "src": "/images/postre13.png",
-	  "alt": "13"
-	},
-	{
-	  "src": "/images/postre14.png",
-	  "alt": "14"
-	},
-	{
-	  "src": "/images/postre15.png",
-	  "alt": "15"
-	},
-	{
-	  "src": "/images/postre16.png",
-	  "alt": "16"
-	},
-	{
-	  "src": "/images/postre17.png",
-	  "alt": "17"
-	},
-	{
-	  "src": "/images/postre18.png",
-	  "alt": "18"
-	},
-	{
-	  "src": "/images/postre19.png",
-	  "alt": "19"
-	},
-	{
-	  "src": "/images/postre20.png",
-	  "alt": "20"
-	},
-	{
-	  "src": "/images/postre21.png",
-	  "alt": "21"
-	},
-	{
-	  "src": "/images/postre22.png",
-	  "alt": "22"
-	},
-	{
-	  "src": "/images/postre23.png",
-	  "alt": "23"
-	},
-	{
-	  "src": "/images/postre24.png",
-	  "alt": "24"
-	},
-	{
-	  "src": "/images/postre25.png",
-	  "alt": "25"
-	},
-	{
-	  "src": "/images/postre26.png",
-	  "alt": "26"
-	}
-  ]
-  
+	{ "src": "~/assets/images/galeria/postre1.webp", "alt": "Pastel del viejo oeste." },
+	{ "src": "~/assets/images/galeria/postre2.webp", "alt": "Pastel de Paw patrol" },
+	{ "src": "~/assets/images/galeria/postre3.webp", "alt": "Pastel de Ethan" },
+	{ "src": "~/assets/images/galeria/postre4.webp", "alt": "Pastel de HotWheels" },
+	{ "src": "~/assets/images/galeria/postre5.webp", "alt": "Pastel Happy Birthday" },
+	{ "src": "~/assets/images/galeria/postre6.webp", "alt": "Pastel de Bodas" },
+	{ "src": "~/assets/images/galeria/postre7.webp", "alt": "Pastelde Mario Bros" },
+	{ "src": "~/assets/images/galeria/postre8.webp", "alt": "Pastel de Pinky" },
+	{ "src": "~/assets/images/galeria/postre9.webp", "alt": "Pastel de Batman y Woman" },
+	{ "src": "~/assets/images/galeria/postre10.webp", "alt": "Pastel de Michell" },
+	{ "src": "~/assets/images/galeria/postre11.webp", "alt": "Muffins de Chocolate con Fruta" },
+	{ "src": "~/assets/images/galeria/postre12.webp", "alt": "Muffins de Elote" },
+	{ "src": "~/assets/images/galeria/postre13.webp", "alt": "Pastel de Señora" },
+	{ "src": "~/assets/images/galeria/postre14.webp", "alt": "Trufas de Chocolate" },
+	{ "src": "~/assets/images/galeria/postre15.webp", "alt": "Tarta de nuez" },
+	{ "src": "~/assets/images/galeria/postre16.webp", "alt": "Patel de Moka" },
+	{ "src": "~/assets/images/galeria/postre17.webp", "alt": "Pastel de Capuccino" },
+	{ "src": "~/assets/images/galeria/postre18.webp", "alt": "Oreo" },
+	{ "src": "~/assets/images/galeria/postre19.webp", "alt": "Pastel de Zanahoria" },
+	{ "src": "~/assets/images/galeria/postre20.webp", "alt": "Pastel de Tres Leches con Frutas" },
+	{ "src": "~/assets/images/galeria/postre21.webp", "alt": "Pastel doble Chocolate con frutas" },
+	{ "src": "~/assets/images/galeria/postre22.webp", "alt": "Chocoqueso" },
+	{ "src": "~/assets/images/galeria/postre23.webp", "alt": "Pastel de Tres Leches con Frutas" },
+	{ "src": "~/assets/images/galeria/postre24.webp", "alt": "Pastel Red Velvet" },
+	{ "src": "~/assets/images/galeria/postre25.webp", "alt": "Tarta de frutas" },
+	{ "src": "~/assets/images/galeria/postre26.webp", "alt": "Pastel de bautizo" },
+	{ "src": "~/assets/images/galeria/postre27.webp", "alt": "Muffins de Navidad" },
+	{ "src": "~/assets/images/galeria/postre28.webp", "alt": "Pastel de Cristiano Ronaldo Dos Santos Aveiro" },
+	{ "src": "~/assets/images/galeria/postre29.webp", "alt": "Pastel tres leches con chispas doradas" },
+	{ "src": "~/assets/images/galeria/postre30.webp", "alt": "Pastel de Stich" }
+]

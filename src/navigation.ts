@@ -2,28 +2,16 @@ import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Inicio',
-      href: '/',
-    },
-    {
-      text: 'Productos',
-      href: '/productos'
-    },
-    {
-      text: 'Galeria',
-      href: '/galeria'
-    },
-    {
-      text: 'Videos',
-      href: '/videos'
-    },
-    {
-      text: 'Blogs',
-      href: '/blog'
-    },
+    { text: 'Inicio', href: '/' },
+    {text: 'Menú', href: '/menu'},
+    { text: 'Productos', href: '/productos' },
+    { text: 'Galeria', href: '/galeria' },
+    { text: 'Videos', href: '/videos' },
+    { text: 'Blogs', href: '/blog' },
   ],
-  actions: [{ text: 'English', href: '' }],
+  actions: [
+    { text: 'Español', href: '#', onClick: 'toggleLanguage()' } // Agregado evento
+  ],
 };
 
 export const footerData = {

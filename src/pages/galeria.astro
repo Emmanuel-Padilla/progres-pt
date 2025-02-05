@@ -1,4 +1,5 @@
 ---
+import Image from "~/components/common/Image.astro";
 import Layout from "../layouts/PageLayout.astro";
 import HeroText from '~/components/widgets/HeroText.astro';
 import platillos from '~/utils/data/platillos.json'
@@ -23,7 +24,7 @@ const metadata = {
             {
                 platillos.map((platillo:any )=>{
                     return (
-                    <div class="image"> <img src={platillo.src} alt={platillo.alt}/></div>
+                    <div class="image"> <Image src={platillo.src} alt={platillo.alt} height={1000} width={700}/></div>
                     );
                 })
             }

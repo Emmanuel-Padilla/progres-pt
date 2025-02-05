@@ -1,10 +1,33 @@
-<div>
-  <img class="h-20 w-20 mr-6 rounded-full" src="/images/logopastel.jpeg" alt="logo">
+---
+import Image from "./common/Image.astro";
+---
+
+<div class="logo-container">
+  <Image class="logo-img" src="~/assets/images/general/logopastel.webp" alt="logo">
 </div>
 
 <style>
-  .rounded-full {
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor circular */
+  .logo-container {
+    width: 80px; /* Ajusta el tamaño del contenedor */
+    height: 80px;
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Oculta las partes sobrantes de la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+  }
+
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) { 
+    .logo-container {
+      width: 50px;
+      height: 50px;
+    }
   }
 </style>

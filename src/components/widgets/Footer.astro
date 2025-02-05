@@ -1,4 +1,6 @@
 ---
+import Image from '../common/Image.astro';
+
 
 
 interface Link {
@@ -31,16 +33,36 @@ export interface Props {
   <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="flex items-center justify-center">
           <a href="" class="-m-1.5 p-1.5 flex items-center justify-center">
-            <div>
-              <img class="h-20 w-20 mr-6 rounded-full" src="/images/logopastel.jpeg" alt="logo">
+            <div class="logo-container">
+              <Image class="logo-img" src="~/assets/images/general/logopastel.webp" alt="logo">
             </div>
             
             <style>
-              .rounded-full {
-                border-radius: 50%; /* Hace que la imagen sea circular */
-                object-fit: cover; /* Asegura que la imagen se ajuste correctamente dentro del círculo */
+              .logo-container {
+                width: 80px; /* Tamaño del contenedor */
+                height: 80px; /* Igual al ancho para mantener proporción */
+                border-radius: 50%; /* Hace que el contenedor sea circular */
+                overflow: hidden; /* Oculta las esquinas sobrantes */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            
+              .logo-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Evita que la imagen se deforme */
+              }
+            
+              /* Ajustes para dispositivos móviles */
+              @media (max-width: 768px) { 
+                .logo-container {
+                  width: 50px;
+                  height: 50px;
+                }
               }
             </style>
+            
             
             <span class="ml-1 text-lg">Pasteleria America</span>
           </a>

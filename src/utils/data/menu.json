@@ -1,0 +1,17 @@
+[
+    {
+      "src": "~/assets/images/menus/menu1.webp",
+      "alt": "menu1"
+    },
+    {
+        "src": "~/assets/images/menus/menu2.webp",
+        "alt": "menu2"
+      },{
+        "src": "~/assets/images/menus/menu3.webp",
+        "alt": "menu3"
+      },{
+        "src": "~/assets/images/menus/menu4.webp",
+        "alt": "menu4"
+      }
+  ]
+  
