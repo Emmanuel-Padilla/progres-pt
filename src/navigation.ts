@@ -3,7 +3,7 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Inicio', href: '/' },
-    {text: 'Menú', href: '/menu'},
+    // {text: 'Menú', href: '/menu'},
     { text: 'Productos', href: '/productos' },
     { text: 'Galeria', href: '/galeria' },
     { text: 'Videos', href: '/videos' },
