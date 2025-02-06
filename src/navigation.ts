@@ -4,7 +4,22 @@ export const headerData = {
   links: [
     { text: 'Inicio', href: '/' },
     // {text: 'Menú', href: '/menu'},
-    { text: 'Productos', href: '/productos' },
+    { text: 'Productos', 
+      links: [
+        {
+          text: 'Pasteles',
+          href: getPermalink('/pasteles'),
+        },
+        {
+          text: 'Muffins',
+          href: getPermalink('/muffins'),
+        },
+        {
+          text: 'Galletas',
+          href: getPermalink('/galletas'),
+        },
+      ],
+    },
     { text: 'Galeria', href: '/galeria' },
     { text: 'Videos', href: '/videos' },
     { text: 'Blogs', href: '/blog' },

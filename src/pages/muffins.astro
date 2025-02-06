@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Productos',
+};
+---
+
+
+
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline=""
+    title="Muffins"
+    subtitle="Descubre nuestra deliciosa variedad de muffins, ideales para cualquier ocasión."
+  />
+
+  <Prices
+    prices={[
+  {
+    title: 'Muffin de Elote',
+    subtitle: 'Un muffin dulce y suave con el auténtico sabor del elote.',
+    images: [
+      { src: "~/assets/images/galeria/postre12.webp", alt: "Muffin de Elote" },
+    ],
+    price: 90,
+    period: '',
+    items: [
+      {
+        description: 'Hecho con elote natural y un toque de vainilla.',
+      },
+      {
+        description: 'Textura húmeda y sabor casero.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: '',
+  },
+  {
+    title: 'Muffin de Chocolate',
+    subtitle: 'Para los amantes del chocolate, con un sabor intenso y textura esponjosa.',
+    images: [
+     { "src": "~/assets/images/galeria/postre11.webp", "alt": "Muffins de Chocolate con Fruta"}
+    ],
+    price: 100,
+    period: '',
+    items: [
+      {
+        description: 'Hecho con cacao puro y trozos de chocolate.',
+      },
+      {
+        description: 'Ideal para acompañar con café o leche.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: 'Recomendado',
+  },
+  {
+    title: 'Muffin Clásico',
+    subtitle: 'El muffin tradicional, esponjoso y delicioso, con un toque de vainilla.',
+    images: [
+      { src: "~/assets/images/galeria/muffin1.webp", alt: "Muffin Clásico" },
+    ],
+    price: 80,
+    period: '',
+    items: [
+      {
+        description: 'Perfecto para el desayuno o un antojo dulce.',
+      },
+      {
+        description: 'Disponible con chispas de chocolate o frutos secos.',
+      },
+    ],
+    hasRibbon: true,
+    ribbonTitle: 'Más vendido',
+  },
+]}
+/>

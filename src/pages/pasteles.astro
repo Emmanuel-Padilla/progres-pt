@@ -1,0 +1,409 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Productos',
+};
+---
+
+
+
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline=""
+    title="Pasteles"
+    subtitle="Descubre nuestros pasteles más deliciosos y populares, ideales para cualquier ocasión."
+  />
+  
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+  prices={[
+    {
+      title: 'Pastel de Tres Leches Vainilla',
+      subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/tresleches1.webp", alt: "Pastel de Tres Leches de vainilla" },
+        { src: "~/assets/images/productos/pasteles/tresleches2.webp", alt: "Pastel de Tres Leches de vainilla" },
+      ],
+      price: 400,
+      period: '',
+      items: [
+        {
+          description: 'Pan de vainilla relleno de crema y mermelada de fresa bañado en leche.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Más vendido',
+    },
+    {
+      title: 'Capuccino',
+      subtitle: 'Un pastel exquisito con el equilibrio perfecto entre café y dulzura.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/capuccino1.webp", alt: "Pastel de Capuccino " },
+        ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Bizcocho esponjoso infusionado con café, bañado en tres leches sabor capuccino y relleno de crema de mantequilla con un toque de caramelo y trozos de nuez.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel Red Velvet',
+      subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/redvelvet1.webp", alt: "Pastel Red Velvet 1" },
+        { src: "~/assets/images/productos/pasteles/redvelvet2.webp", alt: "Pastel Red Velvet 2" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate rojo con relleno de crema de queso.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+    {
+      title: 'Pastel de Zanahoria con crema de Queso',
+      subtitle: 'Un clásico irresistible con la suavidad de la zanahoria, especias aromáticas y un toque de nuez.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/pasteldezanahoria1.webp", alt: "Pastel de zanahoria con crema de queso" },
+        { src: "~/assets/images/productos/pasteles/pasteldezanahoria2.webp", alt: "Pastel de zanahoria con crema de queso" },
+        { src: "~/assets/images/productos/pasteles/pasteldezanahoria3.webp", alt: "Pastel de zanahoria con crema de queso" }
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan de zanahoria con nuez, piña y arandanos, libre de huevo',
+        },
+        {
+          description: 'Relleno de crema de queso.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Oreo',
+      subtitle: 'Un pastel irresistible con la clásica combinación de chocolate y galleta.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/oreo1.webp", alt: "Pastel de oreo" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate semi amargo relleno con crema sabor a oreo y galleta.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Moka',
+      subtitle: 'Un pastel con la intensidad del café y el dulzor perfecto para los amantes del moka.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/moka1.webp", alt: "Pastel de Moka" },
+      ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Pan de vainilla bañado en licor de café, relleno de crema de mantequilla y nuez',
+        },
+        ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Chocoqueso',
+      subtitle: 'La fusión perfecta entre el intenso chocolate y la suavidad del queso crema.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocoqueso" },
+      ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate americano. Suave con relleno de flan de queso.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Doble Chocolate',
+      subtitle: 'La fusión perfecta entre el intenso chocolate y la suavidad del queso crema.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/doblechocolate1.webp", alt: "Doble Chocolate " },
+      ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate semi amargo, bañado en Jarabe.',
+        },
+        {
+          description: 'Relleno en crema de chocolate, cubierto con ganashe al 60% de cacao.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Doble Chocolate con Fruta',
+      subtitle: 'La fusión perfecta entre el intenso chocolate y la suavidad del queso crema.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/doblechocolatefruta1.webp", alt: "Doble Chocolate con frutas" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Delicioso bizcocho de chocolate con un cremoso relleno de cheesecake, logrando un balance perfecto entre dulzura e intensidad.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Naranja',
+      subtitle: 'Un pastel esponjoso con un toque cítrico y refrescante.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/pasteldenaranja1.webp", alt: "Pastel de naranjas" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan suave de naranja con rayadura natural, relleno de crema de naranja y queso',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Más vendido',
+    },
+    {
+      title: 'Chocoflan',
+      subtitle: 'La combinación perfecta entre flan cremoso y bizcocho de chocolate.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/chocoflan.jpg", alt: "Chocoflan" },
+        ],
+      price: 360,
+      period: '',
+      items: [
+      {
+      description: "Capas de suave flan de vainilla y bizcocho de chocolate en una sola preparación."
+    },
+    {
+      description: "Bañado en caramelo dorado para un sabor dulce y equilibrado."
+    },
+    {
+      description: "Textura cremosa y esponjosa en cada bocado."
+    }
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Zanahoria',
+      subtitle: 'Un pastel exquisito con el equilibrio perfecto entre café y dulzura.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/pasteldezanahoria2.webp", alt: "Pastel de Zanahoria" },
+        ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Pan de zanahoria con nuez, piña y arandano y libre de huevo.',
+        },
+        {
+          description: 'Relleno con crema de nata.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'ChocoVainilla',
+      subtitle: 'El equilibrio perfecto entre el intenso chocolate y la suavidad de la vainilla.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/chocovainilla.jpg", alt: "Chocovainilla" }
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Mitad de doble chocolate y mitad de pan de vainilla.',
+        },
+        {
+          description: 'Relleno de crema y fruta (durazno, fresa y nuez).',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: 'Recomendado',
+    },
+    {
+      title: 'Mil Hojas',
+      subtitle: 'Un clásico irresistible con la suavidad de la zanahoria, especias aromáticas y un toque de nuez.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/milhojas.jpg", alt: "Pastel Mil Hojas" },
+        ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Capas de pan de hojaldre, relleno con crema pastelera, durazno, fresa y nuez.',
+        },
+        {
+          description: 'Cubierto con crema de limón.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Marmoleado',
+      subtitle: 'Un pastel irresistible con la clásica combinación de chocolate y galleta.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/marmoleado.jpg", alt: "Marmoleado" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan de vainilla con chocolate americano extra suave.',
+        },
+        {
+          description: 'Con una capa rellena de crema de nata, durazno y nuez.',
+        },
+        {
+          description: 'Con una capa de relleno de crema de chocolate.',
+        },
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Frutas',
+      subtitle: 'Un pastel fresco y ligero con una deliciosa combinación de frutas naturales.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/pasteldefrutas.jpg", alt: "Pastel de frutas" },
+      ],
+      price: 420,
+      period: '',
+      items: [
+      {
+      description: "Pastel de vainilla, relleno de frutas /durazno, piña, fresa y nuez)."
+    },
+    {
+      description: "Bañado en Jarabe."
+    },
+        ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Cheesecake',
+      subtitle: 'La fusión perfecta entre el intenso chocolate y la suavidad del queso crema.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/cheesecake1.webp", alt: "Cheesecake" },
+      ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Delicioso bizcocho de chocolate con un cremoso relleno de cheesecake, logrando un balance perfecto entre dulzura e intensidad.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Nuez',
+      subtitle: 'Un pastel suave y esponjoso con el inconfundible sabor de la nuez.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/pasteldenuez.jpg", alt: "Pastel de nuez" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan sabor a nuez, con relleno de crema y trozos de nuez.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Selva Negra',
+      subtitle: 'Un pastel clásico con la combinación perfecta de chocolate.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/selvanegra.jpg", alt: "Selva negra" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate amargo, con relleno de crema y cereza.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Tres Leches Chocolate',
+      subtitle: 'Una versión irresistible del clásico tres leches, con el intenso sabor del chocolate.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/treslecheschocolate.jpg", alt: "Pastel de tres leches chocolate" },
+      ],
+      price: 420,
+      period: '',
+      items: [
+        {
+          description: 'Pan de chocolate bañado en 3 leches, con relleno de crema de chocolate.',
+        },
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+    {
+      title: 'Pastel de Dulce de Leche',
+      subtitle: 'Un pastel cremoso y delicioso con el inconfundible sabor del dulce de leche.',
+      images: [
+        { src: "~/assets/images/productos/pasteles/dulcedeleche.jpg", alt: "Pastel dulce de leche" },
+      ],
+      price: 450,
+      period: '',
+      items: [
+      {
+      description: "Pan sabor a tres leches, con dulce de leche, en la leche y en el relleno."
+      },
+    
+        
+      ],
+      hasRibbon: true,
+      ribbonTitle: '',
+    },
+  ]}
+/>
