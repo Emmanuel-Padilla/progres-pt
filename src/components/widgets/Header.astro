@@ -42,6 +42,17 @@ const {
   position = 'center',
 } = Astro.props;
 
+const DEFAULT_LANGUAGE = 'es';
+const content = {
+  en: {
+    button: "English",
+  },
+  es: {
+    button: "Español",
+  },
+};
+console.log("here", content[DEFAULT_LANGUAGE]);
+
 // const currentPath = /${trimSlash(new URL(Astro.url).pathname)};
 ---
 
@@ -88,22 +99,24 @@ const {
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
-                  <button
+                <button
                     type="button"
                     class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
                   >
-                    {text}{' '}
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
-                  </button>
+                  <span data-translate={text}>{text}</span>
+                  <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+              </button>
+
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
                           class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-orange-900 py-2 px-5 block whitespace-no-wrap',
                             // { 'aw-link-active': href2 === currentPath },
                           ]}
                           href={href2}
+                          data-translate={text2}
                         >
                           {text2}
                         </a>
@@ -118,8 +131,9 @@ const {
                     // { 'aw-link-active': href === currentPath },
                   ]}
                   href={href}
+                  data-translate={text}
                 >
-                  {text}
+                   {text}
                 </a>
               )}
             </li>
@@ -149,7 +163,98 @@ const {
             ''
           )
         }
+        <div class="mt-12 lg:mt-0">
+          <a
+            id="language-toggle"
+            class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+            style="cursor: pointer;"
+          >
+            <span class="relative text-sm font-semibold text-white dark:text-[#3F2E2B]" set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+          </a>
+      </div>
       </div>
     </div>
   </div>
 </header>
+
+<script>
+  import { setLanguage, translate } from "../../js/translate";
+  
+  const DEFAULT_LANGUAGE = 'es';
+  const content = {
+    en: {
+      button: "English",
+    },
+    es: {
+      button: "Español",
+    },
+  };
+  
+  const languageToggle = document.getElementById("language-toggle");
+    const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+  
+  const renderButton = () => {
+    const languageToggle = document.getElementById("language-toggle");
+    console.log("languaje toggle",languageToggle);
+    
+    const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+    if(languageToggle){
+      languageToggle!.addEventListener("click", (event) => {
+        console.log("ejecutando");
+        
+        event.preventDefault();
+        const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+        console.log("click button",currentLanguage, "Idioma que debe verse en el boton en el click",content[currentLanguage].button);
+        buttonText!.textContent = content[currentLanguage].button;
+        setLanguage(currentLanguage);
+      });
+    }
+  }
+  renderButton()
+
+  const handleTranslate= () =>{
+      const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+      console.log({currentLanguage},"Idioma que debe verse en el boton",content[currentLanguage].button);
+
+      buttonText!.textContent = content[currentLanguage].button;
+      
+      translate(currentLanguage);
+  }
+  // console.log("Change language boton",changeLanguageBtn, "Default",DEFAULT_LANGUAGE, "")
+
+  window.addEventListener("load", ( )=>{
+    console.log("Dentro Load");
+    
+    renderButton();
+    handleTranslate();
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("Dentro DOMContent");
+    renderButton();
+    handleTranslate();
+  });
+  
+  
+  document.addEventListener("astro:after-swap", () => {
+    console.log("Dentro astro after");
+      renderButton();
+      handleTranslate();
+  })
+
+</script>
+
+<script>
+
+  import { setLanguage, translate } from "../../js/translate"
+
+  // I don't like this, but when change page the language have to set again
+  window.addEventListener('popstate', function() {
+      // window.location.reload();
+      
+      const currentLanguage = window.localStorage.getItem("languageDefault") || 'es';
+      console.log("execute", currentLanguage);
+      
+      translate(currentLanguage);
+  }, false);
+
+</script>

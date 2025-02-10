@@ -33,7 +33,7 @@ const {
                 <div class="rounded-lg backdrop-blur border shadow px-4 py-6 flex w-full max-w-xs flex-col justify-between text-center">
                   <div class="px-2 py-0">
 
-                    {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
+                    {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)} data-translate ={title}>{title}</h3>}
                     {description && (
                         <p
                         class={twMerge(`${title ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}

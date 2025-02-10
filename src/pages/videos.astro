@@ -7,19 +7,19 @@ const metadata = {
 };
 const videos = [
   {
-    title: "Técnicas",
-    description: "Técnica en decoracion con duyas o boquillas.",
+    title: "videotitle1",
+    description: "videodes1",
     url: "EqrpGbibIQo"
   },
   {
-    title: "Aprende Pastelería",
-    description: "Aprende técnicas espectaculares.",
-    url: "d6Ih7ckl_gY"
+    title: "videotitle2",
+    description: "videodes2",
+    url: "GeMPqyl8xyk"
   },
   {
-    title: "Repostería para Todos:",
-    description: "Recetas, Tips y Consejos para Principiantes y Expertos",
-    url: "P16UTnXi0Q4"
+    title: "videotitle3",
+    description: "videodes3",
+    url: "CLD0XT4DLvY"
   }
 
 ];
@@ -28,14 +28,14 @@ const videos = [
 <Layout metadata={metadata}>
 
 <section id="videos" class="videos-section">
-  <h2 class="text-6xl font-bold mb-4">Nuestros Videos</h2>
-  <p class="text-lg mb-9">Explora más con nosotros.</p>
+  <h2 class="text-6xl font-bold mb-4" data-translate="nv">Nuestros Videos</h2>
+  <p class="text-lg mb-9" data-translate="nve">Explora más con nosotros.</p>
   
   <div class="videos-grid">
     {videos.map((video) => (
       <div class="video-card">
-        <h3 style="color: black;">{video.title}</h3>
-        <p class="text-lg mb-9" style="color: black;">{video.description}</p>
+        <h3 style="color: black;" data-translate={video.title}>{video.title}</h3>
+        <p class="text-lg mb-9" style="color: black;" data-translate={video.description}>{video.description}</p>
         <Youtube client:load id={video.url} title={video.title}/>
       </div>
     ))}

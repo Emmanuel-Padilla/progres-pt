@@ -7,15 +7,15 @@ export const headerData = {
     { text: 'Productos', 
       links: [
         {
-          text: 'Pasteles',
+          text: 'test',
           href: getPermalink('/pasteles'),
         },
         {
-          text: 'Muffins',
+          text: 'caca',
           href: getPermalink('/muffins'),
         },
         {
-          text: 'Galletas',
+          text: 'mierda',
           href: getPermalink('/galletas'),
         },
       ],
@@ -23,9 +23,6 @@ export const headerData = {
     { text: 'Galeria', href: '/galeria' },
     { text: 'Videos', href: '/videos' },
     { text: 'Blogs', href: '/blog' },
-  ],
-  actions: [
-    { text: 'Español', href: '#', onClick: 'toggleLanguage()' } // Agregado evento
   ],
 };
 
