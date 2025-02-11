@@ -154,7 +154,7 @@ console.log("here", content[DEFAULT_LANGUAGE]);
         </div>
         {
           actions?.length ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4">
+          <span class="items-center flex justify-between w-full md:w-auto">
               {actions.map((btnProps) => (
                 <Button {...btnProps} class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
               ))}
@@ -163,13 +163,13 @@ console.log("here", content[DEFAULT_LANGUAGE]);
             ''
           )
         }
-        <div class="mt-12 lg:mt-0">
+        <div class="ml-4 rtl:ml-0 rtl:mr-4">
           <a
             id="language-toggle"
             class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             style="cursor: pointer;"
           >
-            <span class="relative text-sm font-semibold text-white dark:text-[#3F2E2B]" set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+            <span class="relative text-sm font-semibold text-white dark:text-[#5C4942]" set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
           </a>
       </div>
       </div>

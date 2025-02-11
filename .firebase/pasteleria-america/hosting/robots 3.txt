@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://pasteleriasamerica.com/sitemap-index.xml
