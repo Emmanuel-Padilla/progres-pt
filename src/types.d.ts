@@ -141,6 +141,7 @@ export interface Item {
   callToAction?: CallToAction;
   image?: Image;
   mapSrc?: string;
+  href?: string;
 }
 
 export interface Price {
@@ -234,6 +235,7 @@ export interface Stats extends Omit<Headline, 'classes'>, Widget {
 
 export interface Pricing extends Omit<Headline, 'classes'>, Widget {
   prices?: Array<Price>;
+  actions?: string | CallToAction[];
 }
 
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
@@ -258,6 +260,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
+  actions?: string | CallToAction[];
 }
 
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {

@@ -4,19 +4,39 @@ export const headerData = {
   links: [
     { text: 'Inicio', href: '/' },
     // {text: 'Menú', href: '/menu'},
+    { text: 'Sucursales', 
+      links: [
+        {
+          text: 'Chapala',
+          href: getPermalink('/chapala'),
+        },
+        {
+          text: 'Ajijic',
+          href: getPermalink('/ajijic'),
+        },
+        {
+          text: 'Jocotepec',
+          href: getPermalink('/jocotepec'),
+        },
+      ],
+    },
     { text: 'Productos', 
       links: [
         {
-          text: 'test',
+          text: 'pasteles',
           href: getPermalink('/pasteles'),
         },
         {
-          text: 'caca',
+          text: 'Muffins',
           href: getPermalink('/muffins'),
         },
         {
-          text: 'mierda',
+          text: 'Galletas',
           href: getPermalink('/galletas'),
+        },
+        {
+          text: 'Postres',
+          href: getPermalink('/postres'),
         },
       ],
     },

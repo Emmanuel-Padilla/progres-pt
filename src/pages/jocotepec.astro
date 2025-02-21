@@ -1,0 +1,95 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/blog/Headline.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Pasteleria America"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      <span data-translate="sucursaljoco">Sucursal Jocotepec</span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span data-translate="sucursaljocosubtitle">En la hermosa región de Jocotepec, nuestra pastelería te ofrece un espacio cálido donde cada bocado es un deleite. Ya sea para un café por la mañana o un pastel para una ocasión especial, aquí encontrarás la combinación perfecta de sabor y calidad.</span>
+    </Fragment>
+  </Hero>
+
+   <!-- Mapa ******************* -->
+<WidgetWrapper> 
+  <Headline 
+   title= "visit"
+   subtitle=" "
+   ></Headline>
+  <!-- Contenedor del mapa y detalles -->
+  <div class="section row pb-0">
+      <!-- Mapa de Google Maps -->
+      <iframe
+        class="w-full h-80 md:h-96 rounded-lg shadow-lg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59885.90592048024!2d-103.32715201225578!3d20.264262041936856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f43002eaf3781%3A0xe47c3eb25c4dadc!2sPasteler%C3%ADa%20america!5e0!3m2!1ses-419!2smx!4v1740002050183!5m2!1ses-419!2smx" 
+        allowfullscreen=""
+        loading="lazy"
+        style="border: 0;"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>  
+      <Fragment>
+          <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; align-items: flex-start;">
+              <!-- Columna izquierda -->
+              <div style="flex: 1; text-align: center;">
+                <!-- Imagen -->
+                <div><Image src="~/assets/images/general/reloj.webp" alt="Imagen" width="100" height="100" style="display: block; margin: 0 auto 15px;"></div>
+            
+                <!-- Subtítulo en negritas -->
+                <p style="font-weight: bold; margin-bottom: 10px;" data-translate="horario">Horario</p>
+            
+                <!-- Lista de frases -->
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                  <li data-translate="horajoco1">Lunes - Sábado 9a.m - 6p.m</li>            
+                  <li data-translate="horajoco2">Domingo Cerrado</li>
+                </ul>
+              </div>
+            
+              <!-- Columna derecha -->
+              <div style="flex: 1; text-align: center;">
+                <!-- Imagen -->
+                <div><Image src="~/assets/images/general/ubicacion.webp" alt="Imagen" width="100" height="100" style="display: block; margin: 0 auto 15px;"></div>
+            
+                <!-- Subtítulo en negritas -->
+                <p style="font-weight: bold; margin-bottom: 10px;" data-translate="ubicacion">Localización</p>
+            
+                <!-- Lista de frases -->
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                  <li>Carretera Jocotepec-Chapala 1561, 45822 Ajijic, Jal.</li>
+                </ul>
+              </div>
+            </div>     
+      </Fragment>
+  </WidgetWrapper>
+
+  <CallToAction
+  title="pedidos"
+  subtitle="pedidos1"
+  actions={[
+      {
+        text: 'Contactanos',
+        href: '',
+      },
+    ]}
+  />
+</Layout>

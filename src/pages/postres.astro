@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Productos',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- HeroText Widget ******************* -->
+  
+    <HeroText
+      tagline=""
+      title="Galletas"
+      subtitle="Disfruta de nuestras galletas artesanales, horneadas con los mejores ingredientes para un sabor irresistible."
+    />
+  
+    <Prices
+    prices={[
+      {
+        title: 'Pastel de Tres Leches',
+        subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
+        images: [
+          { src: "~/assets/images/productos/pasteles/tresleches1.webp", alt: "Pastel de Tres Leches 1" },
+          { src: "~/assets/images/productos/pasteles/tresleches2.webp", alt: "Pastel de Tres Leches 2" },
+     
+        ],
+        price: 450,
+        period: '',
+        items: [
+          {
+            description: 'Ideal para cumpleaños y reuniones familiares.',
+          },
+          {
+            description: 'Disponible en versiones clásicas y con frutas frescas.',
+          },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'Más vendido',
+      },
+      {
+        title: 'Pastel de Chocolate',
+        subtitle: 'Un pastel rico y cremoso, perfecto para los amantes del chocolate.',
+        images: [
+        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 1" },
+        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 2" },
+        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 3" }
+        ],
+        price: 500,
+        period: '',
+        items: [
+          {
+            description: 'Hecho con chocolate premium y relleno cremoso.',
+          },
+          {
+            description: 'Decorado con trozos de chocolate o frutas.',
+          },
+        ],
+        hasRibbon: true,
+        ribbonTitle: '',
+      },
+      {
+        title: 'Pastel Red Velvet',
+        subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
+        images: [
+          { src: "~/assets/images/productos/pasteles/redvelvet1.webp", alt: "Pastel Red Velvet 1" },
+          { src: "~/assets/images/productos/pasteles/redvelvet2.webp", alt: "Pastel Red Velvet 2" },
+        ],
+        price: 550,
+        period: '',
+        items: [
+          {
+            description: 'Textura esponjosa con el característico color rojo.',
+          },
+          {
+            description: 'Perfecto para celebraciones elegantes.',
+          },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'Recomendado',
+      },
+    ]}
+  />

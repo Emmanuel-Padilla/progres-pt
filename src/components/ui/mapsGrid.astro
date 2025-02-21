@@ -8,6 +8,7 @@ const {
   container: containerClass = '',
   title: titleClass = '',
   description: descriptionClass = '',
+  href: hrefClass = ''
 } = classes;
 ---
 
@@ -28,7 +29,8 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, classes: itemClasses = {}, mapSrc }) => (
+      {items.map(({ title, description, href, classes: itemClasses = {}, mapSrc }) => (
+        <a href={href}>
             <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
                 <div class="rounded-lg backdrop-blur border shadow px-4 py-6 flex w-full max-w-xs flex-col justify-between text-center">
                   <div class="px-2 py-0">
@@ -54,7 +56,8 @@ const {
                   )}
                   </div>
                 </div>
-            </div>
+            </div> 
+        </a>
       ))}
     </div>
   </div>

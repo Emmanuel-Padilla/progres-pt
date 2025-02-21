@@ -31,7 +31,9 @@ const {
   >
     <Headline
       title={title}
+      data-translate={title}
       subtitle={subtitle}
+      data-translate={subtitle}
       tagline={tagline}
       classes={{
         container: 'mb-0 md:mb-0',
@@ -49,7 +51,7 @@ const {
               </div>
             ))
           ) : (
-            <Fragment set:html={actions} />
+            <Fragment set:html={actions} data-translate={actions} />
           )}
         </div>
       )
