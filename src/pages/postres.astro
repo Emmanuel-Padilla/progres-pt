@@ -15,73 +15,99 @@ const metadata = {
   
     <HeroText
       tagline=""
-      title="Galletas"
+      title="Postres"
       subtitle="Disfruta de nuestras galletas artesanales, horneadas con los mejores ingredientes para un sabor irresistible."
     />
   
     <Prices
     prices={[
       {
-        title: 'Pastel de Tres Leches',
-        subtitle: 'El clásico favorito, suave y delicioso, con un toque de crema y frutas.',
-        images: [
-          { src: "~/assets/images/productos/pasteles/tresleches1.webp", alt: "Pastel de Tres Leches 1" },
-          { src: "~/assets/images/productos/pasteles/tresleches2.webp", alt: "Pastel de Tres Leches 2" },
-     
-        ],
+        title: "Tarta de frutas con praliné",
+        subtitle: "Una combinación perfecta de crema suave, frutas frescas y un toque crujiente de praliné.",
+        images: [{ src: "~/assets/images/productos/postres/tartadefrutas.webp", alt: "Tarta de frutas con praliné" }],
         price: 450,
-        period: '',
+        period: "",
         items: [
-          {
-            description: 'Ideal para cumpleaños y reuniones familiares.',
-          },
-          {
-            description: 'Disponible en versiones clásicas y con frutas frescas.',
-          },
+          { description: "Ideal para cumpleaños y reuniones familiares." },
         ],
-        hasRibbon: true,
-        ribbonTitle: 'Más vendido',
+        hasRibbon: false,
+        ribbonTitle: "Más vendido"
       },
       {
-        title: 'Pastel de Chocolate',
-        subtitle: 'Un pastel rico y cremoso, perfecto para los amantes del chocolate.',
-        images: [
-        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 1" },
-        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 2" },
-        { src: "~/assets/images/productos/pasteles/chocoqueso1.webp", alt: "Pastel de Chocolate 3" }
-        ],
+        title: "Tarta de curd de limón",
+        subtitle: "Una explosión de sabor cítrico con una textura cremosa y refrescante.",
+        images: [{ src: "~/assets/images/productos/postres/tartadelimon.webp", alt: "Tarta de curd de limón" }],
         price: 500,
-        period: '',
+        period: "",
         items: [
-          {
-            description: 'Hecho con chocolate premium y relleno cremoso.',
-          },
-          {
-            description: 'Decorado con trozos de chocolate o frutas.',
-          },
+          { description: "Elaborada con limón fresco y base de galleta crujiente." },
         ],
         hasRibbon: true,
-        ribbonTitle: '',
+        ribbonTitle: ""
       },
       {
-        title: 'Pastel Red Velvet',
-        subtitle: 'Un pastel elegante con sabor suave y un toque de crema de queso.',
-        images: [
-          { src: "~/assets/images/productos/pasteles/redvelvet1.webp", alt: "Pastel Red Velvet 1" },
-          { src: "~/assets/images/productos/pasteles/redvelvet2.webp", alt: "Pastel Red Velvet 2" },
-        ],
+        title: "Cubiletes",
+        subtitle: "Pequeños bocados de masa crujiente rellenos de una suave crema de queso.",
+        images: [{ src: "~/assets/images/productos/postres/cubiletes.webp", alt: "Cubiletes de queso" }],
         price: 550,
-        period: '',
+        period: "",
         items: [
-          {
-            description: 'Textura esponjosa con el característico color rojo.',
-          },
-          {
-            description: 'Perfecto para celebraciones elegantes.',
-          },
+          { description: "Textura esponjosa con un relleno cremoso." },
+          { description: "Perfecto para acompañar con café o té." }
         ],
         hasRibbon: true,
-        ribbonTitle: 'Recomendado',
+        ribbonTitle: ""
       },
+      {
+        title: "Alfajor Argentino",
+        subtitle: "Un dulce tradicional con relleno de dulce de leche y un toque de coco.",
+        images: [{ src: "~/assets/images/productos/postres/alfajorargentino.webp", alt: "Alfajor Argentino" }],
+        price: 450,
+        period: "",
+        items: [
+          { description: "Doble capa de galleta rellena de dulce de leche." },
+        ],
+        hasRibbon: true,
+        ribbonTitle: "Más vendido"
+      },
+      {
+        title: "Empanadas de crema pastelera",
+        subtitle: "Deliciosas empanadas rellenas de crema pastelera suave y dulce.",
+        images: [{ src: "~/assets/images/productos/postres/empanadadecrema.webp", alt: "Empanadas de crema pastelera" }],
+        price: 450,
+        period: "",
+        items: [
+          { description: "Masa dorada y crujiente con un relleno suave y cremoso." },
+          { description: "Perfectas para acompañar con café o té." }
+        ],
+        hasRibbon: true,
+        ribbonTitle: "Más vendido"
+      },
+      {
+        title: "Empanadas de piña y manzana",
+        subtitle: "Una combinación de frutas dulces envuelta en una masa crujiente.",
+        images: [{ src: "~/assets/images/productos/postres/empanadadepina.webp", alt: "Empanadas de piña y manzana" }],
+        price: 500,
+        period: "",
+        items: [
+          { description: "Relleno jugoso de piña y manzana." },
+          { description: "Horneadas hasta lograr una textura dorada y crujiente." }
+        ],
+        hasRibbon: true,
+        ribbonTitle: ""
+      },
+      {
+        title: "Tartitas de piña",
+        subtitle: "Mini tartas con un relleno jugoso de piña y una base crujiente.",
+        images: [{ src: "~/assets/images/productos/postres/tartasdepina.webp", alt: "Tartitas de piña" }],
+        price: 550,
+        period: "",
+        items: [
+          { description: "Base de galleta con un relleno dulce de piña." },
+        ],
+        hasRibbon: false,
+        ribbonTitle: "Recomendado"
+      }
     ]}
   />
+  
