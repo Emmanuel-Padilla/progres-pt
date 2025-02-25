@@ -30,5 +30,12 @@
 	{ "src": "~/assets/images/galeria/postre29.webp", "alt": "Pastel tres leches con chispas doradas" },
 	{ "src": "~/assets/images/galeria/postre30.webp", "alt": "Pastel de Stich" },
 	{ "src": "~/assets/images/galeria/postre32.webp", "alt": "Pasteles de bodas." },
-	{ "src": "~/assets/images/galeria/postre33.webp", "alt": "Pastel de frutas" }
+	{ "src": "~/assets/images/galeria/postre33.webp", "alt": "Pastel de frutas" },
+	{"src": "~/assets/images/productos/postres/tartasdepina.webp", "alt": "tarta de piña"},
+	{"src": "~/assets/images/productos/postres/empanadadepina.webp", "alt": "empanda de piña"},
+	{"src": "~/assets/images/productos/postres/cubiletes.webp", "alt": "cubiletes"},
+	{"src": "~/assets/images/productos/postres/empanadadecrema.webp", "alt": "empanada de crema"},
+	{"src": "~/assets/images/productos/postres/tartadelimon.webp", "alt": "tarta de limon"},
+	{"src":"~/assets/images/productos/muffins/muffindeplatano.webp", "alt": "muffin de platano"},
+	{ "src": "~/assets/images/productos/galletas/galletasdealfajor.webp", "alt": "Galletas de alfajor con mermelada de fresa" }
 ]
