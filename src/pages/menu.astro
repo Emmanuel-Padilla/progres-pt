@@ -14,130 +14,130 @@ const metadata = {
     title= "Descubre Nuestros Deliciosos Postres"  
     subtitle="En nuestro menú encontrarás una exquisita selección de postres hechos con amor. Desde pasteles que te cautivan hasta galletas y tartas que endulzan cualquier momento."/>
  
-<!-- Seccion de Menus -->
-<section id="menus">
-	<h3 class="text-4xl font-bold text-center mt-10">Nuestro Menú</h3>
-	<div class="menus-container">
-		{
-        menus.map((menu) => (
-			<div class="service-container" data-aos="fade-up">
-				<div class="zoom">
-                    <div class="image"> <Image src={menu.src} alt={menu.alt} height={350} width={400}/></div>
+	<!-- Seccion de Menus -->
+	<section id="menus">
+		<h3 class="text-4xl font-bold text-center mt-10">Nuestro Menú</h3>
+		<div class="menus-container">
+			{
+			menus.map((menu) => (
+				<div class="service-container" data-aos="fade-up">
+					<div class="zoom">
+						<div class="image"> <Image src={menu.src} alt={menu.alt} height={350} width={400}/></div>
+					</div>
 				</div>
-			</div>
-    
-		))}
-	</div>
-</section>
+		
+			))}
+		</div>
+	</section>
 
-<style>
-	.menus-container {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2rem;
-		justify-content: center;
-		padding: 2rem;
+	<style>
+		.menus-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			justify-content: center;
+			padding: 2rem;
+		}
+
+		.service-container {
+			padding: 14px;
+			border: 1px solid #000000fa;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			width: 400px; /* Aumenta el tamaño del contenedor */
+		}
+
+		.service-container:hover {
+			border-radius: 40px;
+			border: 1px solid #000000;
+		}
+
+		.zoom {
+			position: relative;
+			width: 100%; /* Ancho del contenedor ajustado */
+			height: 400px; /* Aumenta la altura para que la imagen sea más grande */
+			border-radius: 12px;
+			overflow: hidden;
+			cursor: crosshair; /* Indica que el área es interactiva */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		.zoom img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1); /* Imagen centrada y sin zoom inicialmente */
+			width: auto; /* Asegura que las dimensiones sean proporcionales */
+			height: 100%; /* Ocupa toda la altura del contenedor */
+			object-fit: cover; /* Recorta sin deformar */
+			transition: transform 0.5s ease; /* Suaviza la transición del zoom */
+		}
+
+		/* Aplica el zoom personalizado */
+		.zoom:hover img {
+			transform: translate(-50%, -50%) scale(2); /* Duplica el tamaño de la imagen */
+		}
+
+		.zoom:active img {
+			transition: none; /* Elimina la transición al arrastrar */
+		}
+
+		/* Permite mover la imagen cuando está haciendo zoom */
+		.zoom:hover {
+			pointer-events: all;
+		}
+
+		.zoom:hover img {
+			cursor: grab;
+		}
+
+			/* Ajuste de tamaño en dispositivos móviles */
+	@media (max-width: 768px) {
+		.service-container {
+			width: 300px; /* Reduce el tamaño del contenedor */
+		}
+
+		.zoom {
+			height: 200px; /* Reduce aún más la altura del contenedor de la imagen */
+		}
+
+		.zoom img {
+			height: 100%; /* Mantiene la proporción de la imagen */
+			width: auto;
+		}
 	}
 
-	.service-container {
-		padding: 14px;
-		border: 1px solid #000000fa;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		width: 400px; /* Aumenta el tamaño del contenedor */
-	}
 
-	.service-container:hover {
-		border-radius: 40px;
-    	border: 1px solid #000000;
-	}
+	</style>
 
-	.zoom {
-		position: relative;
-		width: 100%; /* Ancho del contenedor ajustado */
-		height: 400px; /* Aumenta la altura para que la imagen sea más grande */
-		border-radius: 12px;
-		overflow: hidden;
-		cursor: crosshair; /* Indica que el área es interactiva */
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	}
+	<script>
+		document.querySelectorAll<HTMLElement>('.zoom').forEach((zoomContainer) => {
+			const image = zoomContainer.querySelector<HTMLImageElement>('img');
 
-	.zoom img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) scale(1); /* Imagen centrada y sin zoom inicialmente */
-		width: auto; /* Asegura que las dimensiones sean proporcionales */
-		height: 100%; /* Ocupa toda la altura del contenedor */
-		object-fit: cover; /* Recorta sin deformar */
-		transition: transform 0.5s ease; /* Suaviza la transición del zoom */
-	}
+			if (!image) return; // Asegurarse de que la imagen existe
 
-	/* Aplica el zoom personalizado */
-	.zoom:hover img {
-		transform: translate(-50%, -50%) scale(2); /* Duplica el tamaño de la imagen */
-	}
+			zoomContainer.addEventListener('mousemove', (event: MouseEvent) => {
+				// Obtener las dimensiones del contenedor
+				const { left, top, width, height } = zoomContainer.getBoundingClientRect();
 
-	.zoom:active img {
-		transition: none; /* Elimina la transición al arrastrar */
-	}
+				// Calcular la posición del mouse dentro del contenedor
+				const x = ((event.clientX - left) / width) * 100;
+				const y = ((event.clientY - top) / height) * 100;
 
-	/* Permite mover la imagen cuando está haciendo zoom */
-	.zoom:hover {
-		pointer-events: all;
-	}
+				// Mover la imagen con transform-origin
+				image.style.transformOrigin = `${x}% ${y}%`;
+				image.style.transform = 'translate(-50%, -50%) scale(2)'; // Zoom personalizado
+			});
 
-	.zoom:hover img {
-		cursor: grab;
-	}
-
-		/* Ajuste de tamaño en dispositivos móviles */
-@media (max-width: 768px) {
-	.service-container {
-		width: 300px; /* Reduce el tamaño del contenedor */
-	}
-
-	.zoom {
-		height: 200px; /* Reduce aún más la altura del contenedor de la imagen */
-	}
-
-	.zoom img {
-		height: 100%; /* Mantiene la proporción de la imagen */
-		width: auto;
-	}
-}
-
-
-</style>
-
-<script>
-	document.querySelectorAll<HTMLElement>('.zoom').forEach((zoomContainer) => {
-		const image = zoomContainer.querySelector<HTMLImageElement>('img');
-
-		if (!image) return; // Asegurarse de que la imagen existe
-
-		zoomContainer.addEventListener('mousemove', (event: MouseEvent) => {
-			// Obtener las dimensiones del contenedor
-			const { left, top, width, height } = zoomContainer.getBoundingClientRect();
-
-			// Calcular la posición del mouse dentro del contenedor
-			const x = ((event.clientX - left) / width) * 100;
-			const y = ((event.clientY - top) / height) * 100;
-
-			// Mover la imagen con transform-origin
-			image.style.transformOrigin = `${x}% ${y}%`;
-			image.style.transform = 'translate(-50%, -50%) scale(2)'; // Zoom personalizado
+			zoomContainer.addEventListener('mouseleave', () => {
+				// Restaurar la posición inicial al salir del contenedor
+				image.style.transformOrigin = 'center';
+				image.style.transform = 'translate(-50%, -50%) scale(1)';
+			});
 		});
 
-		zoomContainer.addEventListener('mouseleave', () => {
-			// Restaurar la posición inicial al salir del contenedor
-			image.style.transformOrigin = 'center';
-			image.style.transform = 'translate(-50%, -50%) scale(1)';
-		});
-	});
-
-</script>
-<!-- Finaliza Seccion de Menus -->
+	</script>
+	<!-- Finaliza Seccion de Menus -->
 </Layout>
