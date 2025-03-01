@@ -40,22 +40,23 @@ const {
   <div aria-hidden="true" class="aspect-w-16 aspect-h-7">
     {
       image && (
-        <div class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg">
+        <div class="max-w-4xl mx-auto p-6 rounded-xl shadow-lg overflow-hidden">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
-              width="auto"
-              height={320}
-              widths={[400, 768]}
-              layout="fullWidth"
+              class="w-full h-[400px] rounded-xl object-cover"
+              width={800}  
+              height={400}  
+              layout="responsive"
               {...image}
             />
           )}
         </div>
       )
     }
+    
+    
     {
       actions && (
         <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0 lg:max-w-7xl intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
