@@ -4,39 +4,39 @@ export const headerData = {
   links: [
     { text: 'Inicio', href: '/' },
     // {text: 'Menú', href: '/menu'},
-    { text: 'Sucursales', 
-      links: [
-        {
-          text: 'Chapala',
-          href: getPermalink('/chapala'),
-        },
-        {
-          text: 'Ajijic',
-          href: getPermalink('/ajijic'),
-        },
-        {
-          text: 'Jocotepec',
-          href: getPermalink('/jocotepec'),
-        },
-      ],
-    },
+    // { text: 'Sucursales', 
+    //   links: [
+    //     {
+    //       text: 'Chapala',
+    //       href: getPermalink('/chapala'),
+    //     },
+    //     {
+    //       text: 'Ajijic',
+    //       href: getPermalink('/ajijic'),
+    //     },
+    //     {
+    //       text: 'Jocotepec',
+    //       href: getPermalink('/jocotepec'),
+    //     },
+    //   ],
+    // },
     { text: 'Productos', 
       links: [
         {
-          text: 'pasteles',
-          href: getPermalink('/pasteles'),
+          text: 'Pagina Web',
+          href: getPermalink( '/info/apps'),
         },
         {
-          text: 'Muffins',
-          href: getPermalink('/muffins'),
+          text: 'CRM',
+          href: getPermalink('/info/crm'),
         },
         {
-          text: 'Galletas',
-          href: getPermalink('/galletas'),
+          text: 'Sistemas Web',
+          href: getPermalink('/info/sistemas'),
         },
         {
-          text: 'Postres',
-          href: getPermalink('/postres'),
+          text: 'Apps (Android y IOS)',
+          href: getPermalink('/info/apps'),
         },
       ],
     },

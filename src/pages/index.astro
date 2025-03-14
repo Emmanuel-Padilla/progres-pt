@@ -11,30 +11,32 @@ import Features2 from '~/components/widgets/Features3.astro';
 
 
 
+
 const metadata = {
-  title: 'Pasteleria America',
+  title: 'UDigital Business',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero2
   actions={[
-    { text: 'Contactanos', href: 'https://wa.me/523319242398', target: '_blank' },
+    { text: 'Contactanos', href: 'https://wa.me/3332548806', target: '_blank' },
   ]}
     image={{
-      src: '~/assets/images/general/pasteleria3.webp',
+      src: '~/assets/images/general/udigital.png',
       alt: 'Pasteles Deliciosos',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">Pasteleria America</span><br />  <span
-        class="hidden xl:inline"></span
-      >
-    </Fragment>
+      <span class="text-accent dark:text-white highlight bg-gradient-to-r from-purple-600 to-black text-transparent bg-clip-text text-6xl">UDigital Business</span>
 
+      
+<br />  <span class="hidden xl:inline"></span>
+    </Fragment>
     <Fragment slot="subtitle">
       <span class="hidden sm:inline dark:text-white" data-translate="INICIO1">
-        Pastelería América es un negocio especializado en la creación de postres y pasteles artesanales, caracterizado por su calidad, tradición y estilo elegante. Ofrece una variedad de opciones dulces, ideales para celebraciones y momentos especiales, destacándose por su atención al detalle y sabores exquisitos.
+        Donde la tecnología y la creatividad convergen: tu visión, nuestro código.
+        Somos expertos digitales que transformamos ideas en soluciones innovadoras. Nuestra pasión es el desarrollo de software de vanguardia y presentar calidad en cada proyecto.
       </span>  
     </Fragment>
   </Hero2>
@@ -50,29 +52,34 @@ const metadata = {
       {
         title: 'paso1',
         description: `DESCRIPTION1`,
-        icon: 'tabler:square-number-1',
+        icon: 'tabler:world-star',
+        href: '/info/pagina-web',
       },
       {
         title: 'paso2',
         description:
           'DESCRIPTION2',
         icon: 'tabler:square-number-2',
+        href: '/info/crm',
       },
       {
         title: 'paso3',
         description: 'DESCRIPTION3',
         icon: 'tabler:square-number-3',
+        href: '/info/sistemas',
       },
       {
         title: 'paso4',
         description: `DESCRIPTION4`,
         icon: 'tabler:square-number-4',
+        href: '/info/apps',
       },
     ]}
     image={{
-      src: '~/assets/images/general/barradepasteles.webp',
+      src: '~/assets/images/general/digital.jpeg',
       alt: 'Barra de Pasteles',
     }}
+    
   />
 
   <!-- Content Widget **************** -->
@@ -105,7 +112,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/productos/pasteles/oreo1.webp',
+      src: '~/assets/images/general/udigital.png',
       alt: 'Pastel de con cerdos en el lodo',
     }}
   >
@@ -151,7 +158,7 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <Features2
+  <!-- <Features2
     title="visit"
     columns={3}
     mapas={true}
@@ -177,7 +184,7 @@ const metadata = {
         
       },
     ]}
-  />
+  /> -->
 
   <!-- Stats Widget ****************** -->
 
@@ -197,25 +204,25 @@ const metadata = {
     testimonials={[
       {
         testimonial: `testimonios1`,
-        name: 'Ana Pantoja',
+        name: 'Antonio Viña Hernandez',
         job: 'Google Maps.',
         image: {
           src: '~/assets/images/general/avatar1.webp',
-          alt: 'Ana Pantoja',
+          alt: 'antonio viña hernandez',
         },
       },
       {
         testimonial: `testimonios2`,
-        name: 'Juan Antonio López Martínez',
+        name: 'Cristina Viña',
         job: 'Google Maps.',
         image: {
           src: '~/assets/images/general/avatar5.webp',
-          alt: 'Juan Antonio López Martínez',
+          alt: 'Cristina Viña',
         },
       },
       {
         testimonial:'testimonios3',
-        name: 'Lizzet Jimenez',
+        name: 'Lizzet Cabrera ',
         job: 'Google Maps.',
         image: {
           src: '~/assets/images/general/avatar2.webp',
@@ -224,7 +231,7 @@ const metadata = {
       },
       {
         testimonial: `testimonios4`,
-        name: 'Celia Gutierrez',
+        name: 'Celia Rodriguez',
         job: 'Google Maps.',
         image: {
           src: '~/assets/images/general/avatar3.webp',
@@ -233,20 +240,20 @@ const metadata = {
       },
       {
         testimonial: `testimonios5`,
-        name: 'Lou Quillio',
+        name: 'Emmanuel Padilla',
         job: 'Google Maps.',
         image: {
           src: '~/assets/images/general/avatar6.webp',
-          alt: 'Lou Quillio',
+          alt: 'Emmanuel Padilla',
         },
       },
       {
         testimonial: 'testimonios6',
-        name: 'Beatryz Llanos',
+        name: 'Gloria Romo',
         job: 'Google Maps.',
         image: {
-          src: '~/assets/images/general/avatar6.webp',
-          alt: 'Beatryz Llanos',
+          src: '~/assets/images/general/avatar3.webp',
+          alt: 'Gloria Romo',
         },
       },
     ]}
@@ -268,24 +275,24 @@ const metadata = {
         description:
           'faqs_2',
       },
-      {
-        title: 'faqs3',
-        description: `faqs_3`,
-      },
-      {
-        title: 'faqs4',
-        description:
-          'faqs_4',
-      },
-      {
-        title: 'faqs5',
-        description:
-          'faqs_5',
-      },
-      {
-          title: 'faqs6',
-          description: 'faqs_6'
-}
+//       {
+//         title: 'faqs3',
+//         description: `faqs_3`,
+//       },
+//       {
+//         title: 'faqs4',
+//         description:
+//           'faqs_4',
+//       },
+//       {
+//         title: 'faqs5',
+//         description:
+//           'faqs_5',
+//       },
+//       {
+//           title: 'faqs6',
+//           description: 'faqs_6'
+// }
 
     ]}
   />

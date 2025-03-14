@@ -4,45 +4,76 @@ import '@fontsource-variable/inter';
 
 <style is:inline>
   :root {
-  --aw-font-sans: 'Inter Variable';
-  --aw-font-serif: 'Inter Variable';
-  --aw-font-heading: 'Inter Variable';
-
-  --aw-color-primary: rgb(92, 73, 66);
-  --aw-color-secondary: rgb(91, 72, 65);
-  --aw-color-accent: rgb(100, 82, 74);
-
-  --aw-color-text-heading: rgb(92, 73, 66);
-  --aw-color-text-default: rgb(16, 16, 16);
-  --aw-color-text-muted: rgb(120, 100, 90);
-  --aw-color-bg-page: rgb(255, 255, 255); 
-
-  --aw-color-bg-page-dark: rgb(40, 30, 30); /* Marrón oscuro */
-
-  ::selection {
-    background-color: lavender;
-  }
-}
-
-.dark {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(232, 225, 218); /* Beige claro */
-    --aw-color-secondary: rgb(200, 190, 210); /* Gris lavanda */
-    --aw-color-accent: rgb(244, 180, 190); /* Rosa pastel */
+    --aw-color-primary: rgb(110, 79, 149); /* Morado oscuro */
+    --aw-color-secondary: rgb(199, 184, 210); /* Lavanda claro */
+    --aw-color-accent: rgb(0, 0, 0); /* Lavanda suave */
+
+    --aw-color-text-heading: rgb(110, 79, 149); /* Morado oscuro */
+    --aw-color-text-default: rgb(53, 50, 71); /* Gris púrpura oscuro */
+    --aw-color-text-muted: rgb(34, 34, 34); /* Lavanda grisáceo */
+
+    --aw-color-bg-page: rgb(255, 255, 255); 
+    --aw-color-bg-page-dark: rgb(53, 50, 71); /* Gris púrpura oscuro */
+
+    ::selection {
+      background-color: rgb(199, 184, 210); /* Lavanda claro */
+      color: rgb(53, 50, 71); /* Gris púrpura oscuro */
+    }
+  }
+
+  .spilled-paint-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spilled-paint-effect:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(110, 79, 149, 0.7), rgba(199, 184, 210, 0.5), rgba(110, 79, 149, 0.4));  /* Colores morados y lavanda */
+    transform: translateX(-50%) rotate(-10deg);
+    pointer-events: none;
+    animation: spill 5s infinite ease-in-out;
+  }
+
+  @keyframes spill {
+    0% {
+      transform: translateX(-50%) rotate(-10deg) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) rotate(10deg) scale(1.05);
+    }
+    100% {
+      transform: translateX(-50%) rotate(-10deg) scale(1);
+    }
+  }
+
+  .dark {
+    --aw-font-sans: 'Inter Variable';
+    --aw-font-serif: 'Inter Variable';
+    --aw-font-heading: 'Inter Variable';
+
+    --aw-color-primary: rgb(199, 184, 210); /* Lavanda claro */
+    --aw-color-secondary: rgb(182, 182, 218); /* Lavanda grisáceo */
+    --aw-color-accent: rgb(203, 188, 214); /* Lavanda suave */
 
     --aw-color-text-heading: rgb(255, 255, 255); /* Blanco */
-    --aw-color-text-default: rgb(232, 225, 218); /* Beige claro */
-    --aw-color-text-muted: rgba(200, 190, 210, 0.66); /* Gris lavanda translúcido */
-    
-    --aw-color-bg-page: rgb(30, 32, 40); /* Azul grisáceo oscuro */
-    
+    --aw-color-text-default: rgb(255, 255, 255); /* Lavanda claro */
+    --aw-color-text-muted: rgba(182, 182, 218, 0.66); /* Lavanda grisáceo translúcido */
+
+    --aw-color-bg-page: rgb(0, 0, 0); /* Gris púrpura oscuro */
+
     ::selection {
-        background-color: rgb(190, 170, 240); /* Lavanda suave */
-        color: rgb(30, 32, 40); /* Azul grisáceo oscuro */
+      background-color: rgb(110, 79, 149); /* Morado oscuro */
+      color: rgb(255, 255, 255); /* Blanco */
     }
-}
+  }
 
 </style>

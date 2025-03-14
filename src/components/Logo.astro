@@ -1,20 +1,27 @@
 ---
 import Image from "./common/Image.astro";
 ---
-
-<div class="logo-container">
-  <Image class="logo-img" src="~/assets/images/general/logopastel.webp" alt="logo">
+<div class="img-ct">
+  <div class="logo-container">
+    <Image class="logo-img" src="~/assets/images/general/udb.png" alt="logo">
+  </div>
 </div>
 
 <style>
   .logo-container {
-    width: 80px; /* Ajusta el tamaño del contenedor */
-    height: 80px;
-    border-radius: 50%; /* Hace que el contenedor sea circular */
+    width: 40px; 
+    height: 40px;
     overflow: hidden; /* Oculta las partes sobrantes de la imagen */
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  .img-ct {
+    padding: 5px;
+    background-color: white;
+    border-radius: 10%;
+
   }
 
   .logo-img {

@@ -32,46 +32,48 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {}, mapSrc }) => (
-            <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-              <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
-                <div class="flex justify-center">
-                  {(icon || defaultIcon) && (
-                    <Icon
-                      name={icon || defaultIcon}
-                      class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
-                    />
-                  )}
-                </div>
-                <div class="mt-0.5">
-                  {title && <h3 class={twMerge('text-xl font-bold dark:text-white', titleClass, itemClasses?.title)} data-translate={title}>{title}</h3>}
-                  {description && (
-                    <p
-                      class={twMerge(`${title ? 'mt-3 dark:text-white' : 'dark:text-white'} text-muted dark:text-white`, descriptionClass,  itemClasses?.description)}
-                      data-translate={description} set:html={description}
-                    />
-                  )}
-                  {callToAction && (
-                    <div class={twMerge(`${title || description ? 'mt-3' : ''}`, actionClass, itemClasses?.actionClass)}>
-                      <Button variant="link" {...callToAction} />
-                    </div>
-                  )}
-                  {mapSrc && (
-                    <iframe 
-                      class="map relative shadow-2x1"
-                      src={mapSrc} 
-                      width="600" 
-                      height="350" 
-                      style="border:0;" 
-                      allowfullscreen="" 
-                      loading="lazy" 
-                      referrerpolicy="no-referrer-when-downgrade"
-                    >
-                    </iframe>  
-                  )}
-                </div>
+      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {}, mapSrc,href }) => (
+        <a href={href??null}>
+          <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+            <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
+              <div class="flex justify-center">
+                {(icon || defaultIcon) && (
+                  <Icon
+                    name={icon || defaultIcon}
+                    class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
+                  />
+                )}
+              </div>
+              <div class="mt-0.5">
+                {title && <h3 class={twMerge('text-xl font-bold dark:text-white', titleClass, itemClasses?.title)} data-translate={title}>{title}</h3>}
+                {description && (
+                  <p
+                    class={twMerge(`${title ? 'mt-3 dark:text-white' : 'dark:text-white'} text-muted dark:text-white`, descriptionClass,  itemClasses?.description)}
+                    data-translate={description} set:html={description}
+                  />
+                )}
+                {callToAction && (
+                  <div class={twMerge(`${title || description ? 'mt-3' : ''}`, actionClass, itemClasses?.actionClass)}>
+                    <Button variant="link" {...callToAction} />
+                  </div>
+                )}
+                {mapSrc && (
+                  <iframe 
+                    class="map relative shadow-2x1"
+                    src={mapSrc} 
+                    width="600" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>  
+                )}
               </div>
             </div>
+          </div>
+        </a>
       ))}
     </div>
   )

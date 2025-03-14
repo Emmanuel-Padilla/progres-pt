@@ -26,6 +26,10 @@ const {
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+    <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
+      <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-purple-600 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+      <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-70"></span>
+    </div>
     <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
       <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
         {
@@ -72,6 +76,7 @@ const {
           }
         </div>
         {content && <Fragment set:html={content} />}
+        <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-purple-300 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
       </div>
       <div class="basis-1/2">
         {

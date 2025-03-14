@@ -9,8 +9,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Pastelería América
-    template: '%s — Pastelería Gourmet en Jalisco'
+    default: UDigital Business
+    template: '%s — Soluciones Digitales'
   description: "Disfruta de los mejores pasteles personalizados, pasteles de boda, repostería artesanal y postres gourmet en Jalisco. Hechos con ingredientes de la más alta calidad."
   robots:
     index: true
