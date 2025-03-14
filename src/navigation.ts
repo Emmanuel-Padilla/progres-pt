@@ -40,8 +40,8 @@ export const headerData = {
         },
       ],
     },
-    { text: 'Galeria', href: '/galeria' },
-    { text: 'Videos', href: '/videos' },
+    // { text: 'Galeria', href: '/galeria' },
+    // { text: 'Videos', href: '/videos' },
     { text: 'Blogs', href: '/blog' },
   ],
 };
