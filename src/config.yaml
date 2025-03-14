@@ -11,7 +11,7 @@ metadata:
   title:
     default: UDigital Business
     template: '%s — Soluciones Digitales'
-  description: "Disfruta de los mejores pasteles personalizados, pasteles de boda, repostería artesanal y postres gourmet en Jalisco. Hechos con ingredientes de la más alta calidad."
+  description: "UDigital Business es una empresa de soluciones digitales que ofrece servicios de diseño web, desarrollo de aplicaciones, marketing digital y más."
   robots:
     index: true
     follow: true
