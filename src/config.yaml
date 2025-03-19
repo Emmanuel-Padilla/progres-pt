@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: UDigital Business
-    template: '%s — Soluciones Digitales'
-  description: "UDigital Business es una empresa de soluciones digitales que ofrece servicios de diseño web, desarrollo de aplicaciones, marketing digital y más."
+    default: Progress-PT
+    template: '%s — Clínica de fisioterapia'
+  description: "Clínica de fisioterapia, tratamientos de fisioterapia y nutrición."
   robots:
     index: true
     follow: true
