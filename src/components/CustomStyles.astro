@@ -8,20 +8,21 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(110, 79, 149); /* Morado oscuro */
-    --aw-color-secondary: rgb(199, 184, 210); /* Lavanda claro */
-    --aw-color-accent: rgb(0, 0, 0); /* Lavanda suave */
+    /* Colores principales basados en la imagen */
+    --aw-color-primary: rgb(40, 80, 100); /* Azul oscuro */
+    --aw-color-secondary: rgb(86, 181, 167); /* Verde azulado suave */
+    --aw-color-accent: rgb(255, 255, 255); /* Blanco */
 
-    --aw-color-text-heading: rgb(110, 79, 149); /* Morado oscuro */
-    --aw-color-text-default: rgb(53, 50, 71); /* Gris púrpura oscuro */
-    --aw-color-text-muted: rgb(34, 34, 34); /* Lavanda grisáceo */
+    --aw-color-text-heading: rgb(0, 0, 0); /* Negro */
+    --aw-color-text-default: rgb(0, 0, 0); /* Negro */
+    --aw-color-text-muted: rgba(0, 0, 0, 0.66); /* Verde azulado suave translúcido */
 
-    --aw-color-bg-page: rgb(255, 255, 255); 
-    --aw-color-bg-page-dark: rgb(53, 50, 71); /* Gris púrpura oscuro */
+    --aw-color-bg-page: rgb(255, 255, 255);
+    --aw-color-bg-page-dark: var(--aw-color-primary);
 
     ::selection {
-      background-color: rgb(199, 184, 210); /* Lavanda claro */
-      color: rgb(53, 50, 71); /* Gris púrpura oscuro */
+      background-color: var(--aw-color-secondary); /* Verde azulado suave */
+      color: var(--aw-color-accent); /* Blanco */
     }
   }
 
@@ -37,7 +38,7 @@ import '@fontsource-variable/inter';
     left: 50%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(110, 79, 149, 0.7), rgba(199, 184, 210, 0.5), rgba(110, 79, 149, 0.4));  /* Colores morados y lavanda */
+    background: linear-gradient(135deg, rgba(40, 80, 100, 0.7), rgba(86, 181, 167, 0.5), rgba(40, 80, 100, 0.4));  /* Azul oscuro y verde azulado suave */
     transform: translateX(-50%) rotate(-10deg);
     pointer-events: none;
     animation: spill 5s infinite ease-in-out;
@@ -60,20 +61,20 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(199, 184, 210); /* Lavanda claro */
-    --aw-color-secondary: rgb(182, 182, 218); /* Lavanda grisáceo */
-    --aw-color-accent: rgb(203, 188, 214); /* Lavanda suave */
+    /* Modo oscuro basado en los colores de la imagen */
+    --aw-color-primary: rgb(40, 80, 100);
+    --aw-color-secondary: rgba(86, 181, 167, 0.66);
+    --aw-color-accent: rgba(255, 255, 255, 0.8);
 
-    --aw-color-text-heading: rgb(255, 255, 255); /* Blanco */
-    --aw-color-text-default: rgb(255, 255, 255); /* Lavanda claro */
-    --aw-color-text-muted: rgba(182, 182, 218, 0.66); /* Lavanda grisáceo translúcido */
+    --aw-color-text-heading: rgb(0, 0, 0); /* Negro */
+    --aw-color-text-default: rgb(0, 0, 0); /* Negro */
+    --aw-color-text-muted: var(--aw-color-secondary);
 
-    --aw-color-bg-page: rgb(0, 0, 0); /* Gris púrpura oscuro */
+    --aw-color-bg-page: rgb(40, 80, 100);
 
     ::selection {
-      background-color: rgb(110, 79, 149); /* Morado oscuro */
-      color: rgb(255, 255, 255); /* Blanco */
+      background-color: var(--aw-color-primary); /* Azul oscuro */
+      color: var(--aw-color-accent); /* Blanco */
     }
   }
-
 </style>

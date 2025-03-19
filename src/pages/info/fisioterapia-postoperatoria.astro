@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Pagina Web Informacion',
+  ignoreTemplate: true,
+};
+
+
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/blog/Headline.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+const instalations = [
+  { src: '~/assets/images/general/pagina-web.jpg', alt: 'Caos Image' },
+  { src: '~/assets/images/general/pagina-web.jpg', alt: 'Caos Image' },
+
+  
+]
+
+---
+
+<Layout metadata={metadata}>
+    
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Página web"
+    image={{
+      src: '~/assets/images/general/pagina-web.jpg',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      <span data-translate="apps">Página web</span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+       <span data-translate="appssubtitle"> Ubicada en el corazón de Chapala, nuestra sucursal ofrece un ambiente acogedor donde podrás disfrutar de nuestros exquisitos pasteles y postres artesanales. Con una vista increíble y un espacio cómodo, es el lugar ideal para compartir momentos dulces con tus seres queridos. </span>
+    </Fragment>
+    <span data-translate="sucursalchapalasubtitle"> Ubicada en el corazón de Chapala, nuestra sucursal ofrece un ambiente acogedor donde podrás disfrutar de nuestros exquisitos pasteles y postres artesanales. Con una vista increíble y un espacio cómodo, es el lugar ideal para compartir momentos dulces con tus seres queridos. </span>
+
+    <fragment> </fragment>
+  </Hero>
+
+
+    <CallToAction
+    title="pedidos"
+    subtitle="pedidos1"
+    actions={[
+      {
+        text: 'Contáctanos y realiza tu cotización',
+        href: 'tel:+3317743647',
+      },
+    ]}
+  />
+</Layout>

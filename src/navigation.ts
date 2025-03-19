@@ -6,10 +6,10 @@ export const headerData = {
     // {text: 'Menú', href: '/menu'},
     // { text: 'Sucursales', 
     //   links: [
-    //     {
-    //       text: 'Chapala',
-    //       href: getPermalink('/chapala'),
-    //     },
+        {
+          // text: 'Chapala',
+          // href: getPermalink('/chapala'),
+        },
     //     {
     //       text: 'Ajijic',
     //       href: getPermalink('/ajijic'),
@@ -23,25 +23,35 @@ export const headerData = {
     { text: 'Productos', 
       links: [
         {
-          text: 'Pagina Web',
-          href: getPermalink( '/info/apps'),
+          text: 'terapia-fisica',
+          href: getPermalink( '/info/terapia-fisica'),
+        },
+        
+        {
+          text: 'Rehabilitación Deportiva',
+          href: getPermalink('/info/rehabilitacion'),
         },
         {
-          text: 'CRM',
-          href: getPermalink('/info/crm'),
+          text: 'Manejo del Dolor',
+          href: getPermalink('/info/manejo-dolor'),
         },
         {
-          text: 'Sistemas Web',
-          href: getPermalink('/info/sistemas'),
-        },
-        {
-          text: 'Apps (Android y IOS)',
-          href: getPermalink('/info/apps'),
+          text: 'Fisioterapia Postoperatoria',
+          href: getPermalink('/info/fisioterapia-postoperatoria'),
         },
       ],
     },
-    // { text: 'Galeria', href: '/galeria' },
-    // { text: 'Videos', href: '/videos' },
+    { text: 'Paquetes', 
+      links: [ 
+        {
+          text: 'Paquete 1',
+          href: getPermalink( '/muffins'),
+        },
+
+      ],
+    },
+    { text: 'Galeria', href: '/galeria' },
+    { text: 'Videos', href: '/videos' },
     { text: 'Blogs', href: '/blog' },
   ],
 };

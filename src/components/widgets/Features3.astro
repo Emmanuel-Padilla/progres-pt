@@ -55,10 +55,14 @@ const {
       )
     }
     
-<span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-purple-500 absolute -top-8 lg:rigth-10 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
-<span class="absolute -top-4 md:top-10 right-10 lg:right-16 w-32 h-32 rotate-60 skew-x-8 rounded-3xl bg-purple-800 blur-xl opacity-50 lg:opacity-85 lg:block hidden"></span>
-<span class="absolute -left-12 md:left-8 top-16 lg:top-24 w-20 h-20 rotate-120 skew-x-10 rounded-3xl bg-purple-500 blur-xl opacity-75 lg:opacity-80 lg:block hidden"></span>
-<span class="absolute left-6 md:left-10 top-20 lg:top-32 w-26 h-26 rotate-30 skew-x-4 rounded-3xl bg-purple-300 blur-xl opacity-65 lg:opacity-95 lg:block hidden"></span>
+    <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-[#33c6b9] blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+    <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-[#02b5aa] blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+    <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-[#017a73] blur-xl opacity-70"></span>
+    <span class="absolute left-8 top-1/3 w-24 h-24 -rotate-12 skew-x-6 rounded-3xl bg-[#33c6b9] blur-xl opacity-60"></span>
+    <span class="absolute right-12 bottom-20 w-32 h-32 rotate-6 skew-y-6 rounded-3xl bg-[#018f87] blur-lg opacity-75"></span>
+    <span class="absolute right-10 top-1/2 w-20 h-20 rotate-90 skew-x-12 rounded-3xl bg-[#02b5aa] blur-2xl opacity-65"></span>
+    <span class="absolute right-6 top-10 w-28 h-28 rotate-45 skew-y-12 rounded-3xl bg-[#02b5aa] blur-2xl opacity-70 lg:opacity-95"></span>
+
 
     {
       actions && (
@@ -85,9 +89,10 @@ const {
         defaultIcon={defaultIcon}
         classes={{
           container: 'mt-12',
-          panel: 'max-w-full sm:max-w-md transition-transform duration-300 transform hover:scale-105 hover:bg-[#D8B4E2] hover:shadow-lg rounded-lg p-4',
+          panel: 'max-w-full sm:max-w-md transition-transform duration-300 transform hover:scale-105 hover:bg-[#01a99d] hover:shadow-lg rounded-lg p-4',
           title: 'text-lg font-semibold dark:text-white hover:text-white hover:underline',
           description: 'mt-0.5 dark:text-white',
+
           icon: 'flex-shrink-0 mt-1 text-primary w-6 h-6',
           ...((classes?.items as object) ?? {}),
         }}
@@ -99,7 +104,8 @@ const {
         defaultIcon={defaultIcon}
         classes={{
           container: 'mt-12',
-          panel: 'max-w-full sm:max-w-md transition-transform duration-300 transform hover:scale-105 hover:bg-gradient-to-r from-[#D8B4E2]  to-[#C8A2C8] hover:shadow-lg rounded-lg p-4',
+          panel: 'max-w-full sm:max-w-md transition-transform duration-300 transform hover:scale-105 hover:bg-gradient-to-r from-[#01a99d] via-[#00a89c] to-[#01ab9e] hover:shadow-lg rounded-lg p-4',
+
 
           title: 'text-lg font-semibold dark:text-white hover:text-white hover:underline',
           description: 'mt-0.5 dark:text-white',

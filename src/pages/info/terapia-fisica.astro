@@ -1,0 +1,128 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Pagina Web Informacion',
+  ignoreTemplate: true,
+};
+
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/blog/Headline.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+
+---
+
+<Layout metadata={metadata}>
+    
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Recupera Tu Bienestar"
+    image={{
+      src: '~/assets/images/general/terapia-fisica.png',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      <span data-translate="sucursalchapala">Terapia Física Personalizada</span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+        Ubicada en el corazón de Chapala, nuestra sucursal ofrece un ambiente acogedor donde podrás disfrutar de nuestros exquisitos pasteles y postres artesanales. Con una vista increíble y un espacio cómodo, es el lugar ideal para compartir momentos dulces con tus seres queridos.
+    </Fragment>
+    
+
+    
+    
+    
+    
+  </Hero>
+  
+  <Features2
+  title="tt_features2"
+  subtitle="stt_features2"
+  columns={3}
+  items={[
+    {
+      title: 'dtt_features2',
+      description:
+        'dtt_features2_1',
+      icon: 'tabler:school',
+    },
+    {
+      title: 'dtt_features2_2',
+      description:
+        'dtt_features2_3',
+      icon: 'tabler:photo-sensor-2',
+    },
+    {
+      title: 'dtt_features2_4',
+      description: `dtt_features2_5`,
+      icon: 'tabler:mood-plus',
+    },
+    {
+      title: 'dtt_features2_6',
+      description:
+        'dtt_features2_7',
+      icon: 'tabler:shopping-cart',
+    },
+    {
+      title: 'dtt_features2_8',
+      description:
+        'dtt_features2_9',
+      icon: 'tabler:article',
+    },
+    {
+      title: 'dtt_features2_10',
+      description:
+        'dtt_features2_11',
+      icon: 'tabler:user-heart',
+    },
+  ]}
+/>
+<Content
+    isReversed
+    tagline="Inside template"
+    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    items={[
+      {
+        title: 'Built on top of Astro 5.0',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+      },
+      {
+        title: 'Styled using Tailwind CSS',
+        description:
+          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  ></Content>
+
+
+
+    <CallToAction
+    title="pedidos"
+    subtitle="pedidos1"
+    actions={[
+      {
+        text: 'Contáctanos y realiza tu cotización',
+        href: 'tel:3332548806',
+      },
+    ]}
+  />
+</Layout>
